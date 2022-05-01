@@ -14,11 +14,11 @@ $body2: (size: .875rem, line-height: 1.25rem, letter-spacing: .01786em, weight: 
 $overline: (size: .75rem, line-height: 2rem, letter-spacing: .16667em, weight: 500) !default;
 $caption: (size: .75rem, line-height: 1.25rem, letter-spacing: .03333em, weight: 400) !default;
 
-$display1: (size: 6rem, line-height: 6rem, letter-spacing: -.01562em, weight: 300) !default;
-$display2: (size: 3.75rem, line-height: 3.75rem, letter-spacing: -.00833em, weight: 300) !default;
-$display3: (size: 3rem, line-height: 3.125rem, letter-spacing: normal, weight: 400) !default;
-$display4: (size: 2.125rem, line-height: 2.5rem, letter-spacing: .00735em, weight: 400) !default;
-$display5: (size: 1.5rem, line-height: 2rem, letter-spacing: normal, weight: 400) !default;
-$display6: (size: 1.25rem, line-height: 2rem, letter-spacing: .0125em, weight: 500) !default;
+$display1: (size: 14rem, line-height: 14rem, weight: 300) !default;
+$display2: (size: 12rem, line-height: 12rem, weight: 300) !default;
+$display3: (size: 10rem, line-height: 10rem, weight: 400) !default;
+$display4: (size: 8rem, line-height: 8rem, weight: 400) !default;
+$display5: (size: 6rem, line-height: 6rem, weight: 400) !default;
+$display6: (size: 4rem, line-height: 4rem, weight: 500) !default;
 
 $displays: (1: $display1, 2: $display2, 3: $display3, 4: $display4, 5: $display5, 6: $display6) !default;
