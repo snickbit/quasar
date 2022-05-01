@@ -1,0 +1,54 @@
+{
+	"name": "@remedyred/quasar-forms",
+	"description": "RemedyRed Quasar dynamic forms with pinia stores",
+	"version": "0.0.22",
+	"license": "UNLICENSED",
+	"publishConfig": {
+		"registry": "https://npm.remedyred.com/",
+		"access": "public"
+	},
+	"main": "./dist/remedyred-quasar-forms.umd.js",
+	"module": "./dist/remedyred-quasar-forms.es.js",
+	"exports": {
+		".": {
+			"import": "./dist/remedyred-quasar-forms.es.js",
+			"require": "./dist/remedyred-quasar-forms.umd.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"index": "indexer src",
+		"clean": "shx rm -rf dist",
+		"watch": "vite build --watch",
+		"build": "vite build",
+		"storybook": "start-storybook -p 6007 --no-open",
+		"build-storybook": "build-storybook",
+		"depcheck": "depcheck",
+		"prod": "yarn index && vite build"
+	},
+	"dependencies": {
+		"@quasar/extras": "^1.13.5",
+		"@snickbit/minia": "^0.0.14",
+		"@snickbit/utilities": "^3.0.15",
+		"pinia": "^2.0.13",
+		"quasar": "^2.6.6",
+		"vue": "^3.2.33",
+		"vue-router": "^4.0.14"
+	},
+	"devDependencies": {
+		"@quasar/vite-plugin": "^1.0.9",
+		"@remedyred/indexer": "^2.0.68",
+		"@storybook/addon-actions": "^6.4.22",
+		"@storybook/addon-essentials": "^6.4.22",
+		"@storybook/addon-links": "^6.4.22",
+		"@storybook/builder-vite": "^0.1.30",
+		"@storybook/vue3": "^6.4.22",
+		"@vitejs/plugin-vue": "^2.3.1",
+		"sass": "1.50.0",
+		"shx": "^0.3.4",
+		"vite": "^2.9.5",
+		"vue-loader": "^17.0.0"
+	}
+}

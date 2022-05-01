@@ -1,0 +1,37 @@
+[
+	{
+		"index": "src/composables/index.js",
+		"files": [
+			{
+				"export": "individual",
+				"dir": "src/composables"
+			}
+		]
+	},
+	{
+		"index": "src/index.js",
+		"files": [
+			{
+				"export": "individual",
+				"file": "src/components/"
+			},
+			{
+				"export": "individual",
+				"file": "src/composables/"
+			},
+			{
+				"export": "skip",
+				"dir": "src"
+			}
+		]
+	},
+	{
+		"index": "src/components/index.js",
+		"files": [
+			{
+				"export": "default",
+				"dir": "src/components"
+			}
+		]
+	}
+]
