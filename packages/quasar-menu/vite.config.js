@@ -8,8 +8,8 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: path.resolve(__dirname, 'src/index.js'),
-			name: 'snickbit-quasar-forms',
-			fileName: (format) => `snickbit-quasar-forms.${format}.js`
+			name: 'snickbit-quasar-menu',
+			fileName: (format) => `snickbit-quasar-menu.${format}.js`
 		},
 		rollupOptions: {
 			external: [

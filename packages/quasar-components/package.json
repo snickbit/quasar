@@ -1,22 +1,18 @@
 {
-	"name": "@remedyred/quasar",
-	"description": "RemedyRed Quasar components",
+	"name": "@snickbit/quasar",
+	"description": "My custom Quasar components. Use with caution.",
 	"version": "0.1.43",
-	"license": "UNLICENSED",
-	"publishConfig": {
-		"registry": "https://npm.remedyred.com/",
-		"access": "public"
-	},
-	"main": "./dist/remedyred-quasar.umd.js",
-	"module": "./dist/remedyred-quasar.es.js",
+	"license": "MIT",
+	"main": "./dist/snickbit-quasar.umd.js",
+	"module": "./dist/snickbit-quasar.es.js",
 	"exports": {
 		".": {
-			"import": "./dist/remedyred-quasar.es.js",
-			"require": "./dist/remedyred-quasar.cjs.js"
+			"import": "./dist/snickbit-quasar.es.js",
+			"require": "./dist/snickbit-quasar.cjs.js"
 		},
-		"./dist/remedyred-quasar.css": {
-			"import": "./dist/remedyred-quasar.css",
-			"require": "./dist/remedyred-quasar.css"
+		"./dist/snickbit-quasar.css": {
+			"import": "./dist/snickbit-quasar.css",
+			"require": "./dist/snickbit-quasar.css"
 		},
 		"./dist/variables.scss": {
 			"import": "./dist/variables.scss",
@@ -33,8 +29,6 @@
 		"watch": "vite build --watch",
 		"build:styles": "bundle-scss -m ./src/styles/variabes.scss -d ./dist/variables.scss",
 		"build:js": "vite build",
-		"storybook": "start-storybook -p 6007 --no-open",
-		"build:storybook": "build-storybook",
 		"depcheck": "depcheck",
 		"prod": "npm run index && npm run build:js && npm run build:styles"
 	},
@@ -49,16 +43,10 @@
 	"devDependencies": {
 		"@quasar/vite-plugin": "^1.0.9",
 		"@remedyred/indexer": "^2.0.68",
-		"@storybook/addon-actions": "^6.4.22",
-		"@storybook/addon-essentials": "^6.4.22",
-		"@storybook/addon-links": "^6.4.22",
-		"@storybook/builder-vite": "^0.1.30",
-		"@storybook/vue3": "^6.4.22",
 		"@vitejs/plugin-vue": "^2.3.1",
 		"bundle-scss": "^1.5.1",
 		"sass": "^1.50.0",
 		"shx": "^0.3.4",
-		"vite": "^2.9.5",
-		"vue-loader": "^17.0.0"
+		"vite": "^2.9.5"
 	}
 }

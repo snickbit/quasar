@@ -1,14 +1,14 @@
 {
-	"name": "@snickbit/quasar-forms",
-	"description": "Quasar form generation",
-	"version": "0.0.22",
+	"name": "@snickbit/quasar-menu",
+	"description": "Quasar menu generation",
+	"version": "0.0.17",
 	"license": "MIT",
-	"main": "./dist/snickbit-quasar-forms.umd.js",
-	"module": "./dist/snickbit-quasar-forms.es.js",
+	"main": "./dist/snickbit-quasar-menu.umd.js",
+	"module": "./dist/snickbit-quasar-menu.es.js",
 	"exports": {
 		".": {
-			"import": "./dist/snickbit-quasar-forms.es.js",
-			"require": "./dist/snickbit-quasar-forms.umd.js"
+			"import": "./dist/snickbit-quasar-menu.es.js",
+			"require": "./dist/snickbit-quasar-menu.umd.js"
 		}
 	},
 	"files": [
@@ -17,10 +17,10 @@
 	"scripts": {
 		"index": "indexer src",
 		"clean": "shx rm -rf dist",
-		"watch": "vite build --watch",
+		"watch": "vite build --watch --mode 'development",
 		"build": "vite build",
 		"depcheck": "depcheck",
-		"prod": "yarn index && vite build"
+		"prod": "npm run index && vite build"
 	},
 	"dependencies": {
 		"@snickbit/minia": "^0.0.14",
@@ -33,7 +33,7 @@
 		"@quasar/vite-plugin": "^1.0.9",
 		"@remedyred/indexer": "^2.0.68",
 		"@vitejs/plugin-vue": "^2.3.1",
-		"sass": "1.50.0",
+		"sass": "^1.50.0",
 		"shx": "^0.3.4",
 		"vite": "^2.9.5"
 	}

@@ -8,8 +8,8 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: path.resolve(__dirname, 'src/index.js'),
-			name: 'remedyred-quasar',
-			fileName: (format) => `remedyred-quasar.${format}.js`
+			name: 'snickbit-quasar',
+			fileName: (format) => `snickbit-quasar.${format}.js`
 		},
 		rollupOptions: {
 			external: [
@@ -23,7 +23,7 @@ export default defineConfig({
 					vue: 'Vue',
 					quasar: 'Quasar'
 				},
-				assetFileNames: assetInfo => assetInfo.name === 'style.css' ? 'remedyred-quasar.css' : assetInfo.name
+				assetFileNames: assetInfo => assetInfo.name === 'style.css' ? 'snickbit-quasar.css' : assetInfo.name
 			}
 		}
 	},
