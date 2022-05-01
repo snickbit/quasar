@@ -15,7 +15,8 @@
 		"typedoc-plugin-no-inherit",
 		"utilities",
 		"vue-loader",
-		"vue-router"
+		"vue-router",
+		"@quasar/extras"
 	],
 	"oneline": true,
 	"ignore-bin-package": true
