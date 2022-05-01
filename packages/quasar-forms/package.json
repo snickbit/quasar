@@ -1,7 +1,7 @@
 {
 	"name": "@snickbit/quasar-forms",
 	"description": "Quasar form generation",
-	"version": "0.0.22",
+	"version": "0.0.23",
 	"license": "MIT",
 	"main": "./dist/snickbit-quasar-forms.umd.js",
 	"module": "./dist/snickbit-quasar-forms.es.js",

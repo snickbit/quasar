@@ -1,7 +1,7 @@
 {
 	"name": "@snickbit/quasar-menu",
 	"description": "Quasar menu generation",
-	"version": "0.0.17",
+	"version": "0.0.18",
 	"license": "MIT",
 	"main": "./dist/snickbit-quasar-menu.umd.js",
 	"module": "./dist/snickbit-quasar-menu.es.js",
