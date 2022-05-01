@@ -1,0 +1,7 @@
+{
+	"name": "@snickbit/quasar",
+	"private": true,
+	"engines": {
+		"node": ">= 12"
+	}
+}

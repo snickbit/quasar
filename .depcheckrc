@@ -1,0 +1,24 @@
+{
+	"specials": [
+		"bin"
+	],
+	"ignores": [
+		"@snickbit/utilities",
+		"@storybook/*",
+		"@types/jest",
+		"animations",
+		"components",
+		"core",
+		"layout",
+		"overrides",
+		"storybook-*",
+		"typedoc",
+		"typedoc-plugin-markdown",
+		"typedoc-plugin-no-inherit",
+		"utilities",
+		"vue-loader",
+		"vue-router"
+	],
+	"oneline": true,
+	"ignore-bin-package": true
+}

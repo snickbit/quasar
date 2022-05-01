@@ -1,0 +1,22 @@
+# hidden folders & junk files
+.*/
+.*
+*.iml
+
+# Log files
+logs/
+
+# Dependencies
+node_modules/
+*.lock
+
+# Compiled files
+dist/
+bin/
+
+# storybook
+storybook-static
+
+# Keep
+!.gitignore
+!.depcheckrc
