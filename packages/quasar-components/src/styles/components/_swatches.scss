@@ -1,0 +1,34 @@
+.swatch {
+	display: block;
+	width: 15px;
+	height: 15px;
+	margin: 0 auto;
+
+	&.swatch-debug {
+		background-color: #f49536;
+	}
+
+	&.swatch-info {
+		background-color: #2196f3;
+	}
+
+	&.swatch-warn {
+		background-color: #ffea00;
+	}
+
+	&.swatch-error {
+		background-color: #f44336;
+	}
+
+	&.swatch-fatal {
+		background-color: #9c27b0;
+	}
+
+	&.swatch-success {
+		background-color: #4caf50;
+	}
+
+	&.swatch-default {
+		background-color: #9e9e9e;
+	}
+}

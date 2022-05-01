@@ -1,0 +1,15 @@
+.q-layout__section--marginal {
+	background-color: transparent;
+}
+
+.body--dark {
+	.q-layout__section--marginal {
+		color: #fff;
+	}
+}
+
+.body--light {
+	.q-layout__section--marginal {
+		color: #000;
+	}
+}

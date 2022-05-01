@@ -1,0 +1,41 @@
+@each $display, $value in $displays {
+	.display-#{$display} {
+		font-size: map-get($value, "size");
+		font-weight: map-get($value, "weight");
+		line-height: map-get($value, "line-height");
+		letter-spacing: map-get($value, "letter-spacing");
+	}
+
+	h#{$display}, .text-h#{$display} {
+		margin-top: 0;
+	}
+}
+
+.q-item.q-router-link--active, .q-item--active {
+	color: var(--q-accent);
+}
+
+.text-default {
+	color: #000;
+}
+
+.text-muted {
+	color: #E0E0E0;
+}
+
+.body--dark {
+	.text-default {
+		color: #fff;
+	}
+
+	.text-muted {
+		color: $grey-5;
+	}
+}
+
+
+.text-ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

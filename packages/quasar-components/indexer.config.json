@@ -1,0 +1,47 @@
+[
+	{
+		"index": "src/styles/index.js",
+		"files": [
+			{
+				"export": "skip",
+				"dir": "src/styles"
+			}
+		]
+	},
+	{
+		"index": "src/index.js",
+		"files": [
+			{
+				"export": "individual",
+				"dir": "src"
+			}
+		]
+	},
+	{
+		"index": "src/helpers/index.js",
+		"files": [
+			{
+				"export": "individual",
+				"dir": "src/helpers"
+			}
+		]
+	},
+	{
+		"index": "src/pages/index.js",
+		"files": [
+			{
+				"export": "default",
+				"dir": "src/pages"
+			}
+		]
+	},
+	{
+		"index": "src/components/index.js",
+		"files": [
+			{
+				"export": "default",
+				"dir": "src/components"
+			}
+		]
+	}
+]

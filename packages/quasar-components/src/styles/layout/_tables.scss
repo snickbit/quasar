@@ -1,0 +1,35 @@
+
+.body--dark {
+	.q-table__top,
+	.q-table__bottom,
+	thead tr:first-child th {
+		background-color: $dark-secondary;
+	}
+}
+
+.body--light {
+	.q-table__top,
+	.q-table__bottom,
+	thead tr:first-child th {
+		background-color: $light-secondary;
+	}
+}
+
+.table-sticky-header {
+	max-height: calc(100vh - 100px);
+
+	thead tr th {
+		position: sticky;
+		z-index: 1;
+	}
+
+	thead tr:first-child th {
+		top: 0;
+	}
+
+	/* this is when the loading indicator appears */
+	&.q-table--loading thead tr:last-child th {
+		/* height of all previous header rows */
+		top: 48px;
+	}
+}

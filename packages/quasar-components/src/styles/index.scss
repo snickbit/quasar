@@ -1,0 +1,19 @@
+@import "./variabes";
+
+// core styles
+@import "core/light";
+@import "core/dark";
+
+// layout styles
+@import "layout/general";
+@import "layout/spacing";
+@import "layout/tables";
+
+// utility styles
+@import "utilities/typography";
+
+// components
+@import "components/swatches";
+
+// animations
+@import "animations/rainbow";
