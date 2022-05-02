@@ -1,5 +1,7 @@
 import mitt from 'mitt'
 import {copyToClipboard} from 'quasar'
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {UnwrapRef} from 'vue'
 
 /**
