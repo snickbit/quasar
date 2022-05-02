@@ -1,5 +1,12 @@
 # @snickbit/quasar Changelog
 
+## 0.1.46
+
+### Patch Changes
+
+- [cf4b65f](https://github.com/snickbit/quasar/commit/cf4b65f) **chore**:  minor adjustments
+
+
 ## 0.1.45
 
 ### Patch Changes
