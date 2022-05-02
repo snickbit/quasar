@@ -12,7 +12,6 @@
 		"overrides",
 		"typedoc",
 		"typedoc-plugin-markdown",
-		"typedoc-plugin-no-inherit",
 		"utilities",
 		"vue-loader",
 		"vue-router",
