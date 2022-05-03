@@ -1,5 +1,14 @@
 # @snickbit/quasar Changelog
 
+## 0.1.47
+
+### Patch Changes
+
+- [a5ed59c](https://github.com/snickbit/quasar/commit/a5ed59c) **feat**(quasar):  add bg-rainbow
+- [dc36beb](https://github.com/snickbit/quasar/commit/dc36beb) **build**:  migrate to nx
+- [6d34a0c](https://github.com/snickbit/quasar/commit/6d34a0c) **chore**:  update dependencies
+
+
 ## 0.1.46
 
 ### Patch Changes
