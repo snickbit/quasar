@@ -1,9 +1,8 @@
 .text-rainbow {
-	animation: rainbow 30s infinite;
+	animation: textRainbow 30s infinite;
 }
 
-
-@keyframes rainbow {
+@keyframes textRainbow {
 	0% {
 		color: hsl(0, 100%, 50%);
 	}
@@ -36,5 +35,46 @@
 	}
 	100% {
 		color: hsl(360, 100%, 50%);
+	}
+}
+
+
+.bg-rainbow {
+	animation: bgRainbow 30s infinite;
+}
+
+@keyframes bgRainbow {
+	0% {
+		background-color: hsl(0, 100%, 50%);
+	}
+	10% {
+		background-color: hsl(36, 100%, 50%);
+	}
+	20% {
+		background-color: hsl(72, 100%, 50%);
+	}
+	30% {
+		background-color: hsl(108, 100%, 50%);
+	}
+	40% {
+		background-color: hsl(144, 100%, 50%);
+	}
+	50% {
+		background-color: hsl(180, 100%, 50%);
+	}
+	60% {
+		background-color: hsl(216, 100%, 50%);
+	}
+	70% {
+		background-color: hsl(252, 100%, 50%);
+	}
+	80% {
+		background-color: hsl(288, 100%, 50%);
+	}
+	90% {
+		background-color: hsl(324, 100%, 50%);
+	}
+	100% {
+		background-color: hsl(360, 100%, 50%);
 	}
 }
