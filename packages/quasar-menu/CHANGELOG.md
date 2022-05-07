@@ -8,7 +8,6 @@
 - [dc36beb](https://github.com/snickbit/quasar/commit/dc36beb) **build**:  migrate to nx
 - [6d34a0c](https://github.com/snickbit/quasar/commit/6d34a0c) **chore**:  update dependencies
 
-
 ## 0.0.19
 
 ### Patch Changes
