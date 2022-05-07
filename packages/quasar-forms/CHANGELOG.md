@@ -1,5 +1,13 @@
 # @snickbit/quasar-forms Changelog
 
+## 0.0.26
+
+### Patch Changes
+
+- [fd4cdcf](https://github.com/snickbit/quasar/commit/fd4cdcf) **chore**(dep):  update dependencies
+- [79cfafb](https://github.com/snickbit/quasar/commit/79cfafb) **style**:  reformat
+
+
 ## 0.0.25
 
 ### Patch Changes

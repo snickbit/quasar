@@ -1,7 +1,7 @@
 {
 	"name": "@snickbit/quasar-forms",
 	"description": "Quasar form generation",
-	"version": "0.0.25",
+	"version": "0.0.26",
 	"license": "MIT",
 	"main": "./dist/snickbit-quasar-forms.umd.js",
 	"module": "./dist/snickbit-quasar-forms.es.js",
@@ -23,7 +23,7 @@
 		"prod": "yarn index && vite build"
 	},
 	"dependencies": {
-		"@snickbit/minia": "^0.0.16",
+		"@snickbit/minia": "^0.0.17",
 		"@snickbit/utilities": "^3.0.17",
 		"quasar": "^2.6.6",
 		"vue": "^3.2.33",
