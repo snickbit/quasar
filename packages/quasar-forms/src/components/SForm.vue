@@ -1,6 +1,14 @@
 <template>
 	<div>
-		<q-form v-if="$form.$ready" :autofocus="autofocus" :greedy="greedy" :no-error-focus="noErrorFocus" :no-reset-focus="noResetFocus" @reset="onReset" @submit="onSubmit">
+		<q-form
+			v-if="$form.$ready"
+			:autofocus="autofocus"
+			:greedy="greedy"
+			:no-error-focus="noErrorFocus"
+			:no-reset-focus="noResetFocus"
+			@reset="onReset"
+			@submit="onSubmit"
+		>
 			<slot>
 				<slot v-for="(field, fieldName) in $form.fields" :key="fieldName" :name="`form-field-`+fieldName" v-bind="field">
 					<s-input :field="field" :field-name="fieldName" lazy/>
@@ -8,14 +16,36 @@
 				<div class="form-actions">
 					<slot name="actions">
 						<slot name="submit">
-							<q-btn v-if="submit !== false" :class="actionButtonClasses" :disabled="disabled" :label="isString(submit) && submit ? submit : 'Submit'" :loading="loading" class="full-width" color="primary" @click="onSubmit"/>
+							<q-btn
+								v-if="submit !== false"
+								:class="actionButtonClasses"
+								:disabled="disabled"
+								:label="isString(submit) && submit ? submit : 'Submit'"
+								:loading="loading"
+								class="full-width"
+								color="primary"
+								@click="onSubmit"
+							/>
 						</slot>
 						<div class="row q-gutter-sm">
 							<slot name="reset">
-								<q-btn v-if="reset !== false" :class="actionButtonClasses" :disabled="fieldsFilled === 0" :label="isString(reset) && reset ? reset : 'Reset'" @click="onReset"/>
+								<q-btn
+									v-if="reset !== false"
+									:class="actionButtonClasses"
+									:disabled="fieldsFilled === 0"
+									:label="isString(reset) && reset ? reset : 'Reset'"
+									@click="onReset"
+								/>
 							</slot>
 							<slot name="cancel">
-								<q-btn v-if="cancel !== false" :class="actionButtonClasses" :disabled="disabled" :label="isString(cancel) && cancel ? cancel : 'Cancel'" color="negative" @click="onCancel"/>
+								<q-btn
+									v-if="cancel !== false"
+									:class="actionButtonClasses"
+									:disabled="disabled"
+									:label="isString(cancel) && cancel ? cancel : 'Cancel'"
+									color="negative"
+									@click="onCancel"
+								/>
 							</slot>
 						</div>
 					</slot>
@@ -34,7 +64,7 @@
 import {count, isEmpty, isString, objectFilter} from '@snickbit/utilities'
 import SInput from 'src/components/SInput'
 import {computed, ref} from 'vue'
-import {useForm} from '../composables'
+import {useForm} from '../composables/forms'
 
 const $props = defineProps({
 	name: {
@@ -60,7 +90,7 @@ const disabled = ref(false)
 const error = ref('')
 
 let $form = useForm($props.name)
-const fieldsFilled = computed(() => $form && count(objectFilter($form.fields, (field, key) => !isEmpty(field.value))))
+const fieldsFilled = computed(() => $form && count(objectFilter($form.fields, field => !isEmpty(field.value))))
 const actionButtonClasses = computed(() => ({'col': [$props.submit, $props.reset, $props.cancel].filter(v => v !== false).length > 1}))
 
 if (!$props.name) {

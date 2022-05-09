@@ -1,12 +1,33 @@
 <template>
 	<div>
-		<component :is="fieldComponent" v-if="field" v-model="field.value" :error="!!field.error" :error-message="field.error || ''" :lazy-rules="lazy" :name="fieldName" :required="field.required" :rules="field.rules" :type="field.type" label-slot>
+		<component
+			:is="fieldComponent"
+			v-if="field"
+			:error="!!field.error"
+			:error-message="field.error || ''"
+			:lazy-rules="lazy"
+			:model-value="field.value"
+			:name="fieldName"
+			:required="field.required"
+			:rules="field.rules"
+			:type="field.type"
+			label-slot
+			@update:model-value="$emit('update:model-value', $event)"
+		>
 			<template #label>
-				<div v-if="isString(label)" v-html="label"></div>
+				<div v-if="isString(label) || $slots.label">
+					<slot name="label">
+						{{ label }}
+					</slot>
+				</div>
 				<component :is="label" v-else/>
 			</template>
 			<template v-if="!isInput">
-				<div v-if="isString(label)" v-html="label"></div>
+				<div v-if="isString(label) || $slots.label">
+					<slot name="label">
+						{{ label }}
+					</slot>
+				</div>
 				<component :is="label" v-else/>
 			</template>
 		</component>
@@ -28,6 +49,8 @@ const $props = defineProps({
 	lazy: Boolean
 })
 
+defineEmits(['update:model-value'])
+
 const isInput = ref(false)
 
 const fieldComponent = computed(() => {
@@ -41,6 +64,7 @@ const fieldComponent = computed(() => {
 		case 'toggle':
 			return QToggle
 		default:
+			// eslint-disable-next-line vue/no-side-effects-in-computed-properties
 			isInput.value = true
 			return QInput
 	}
