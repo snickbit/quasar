@@ -2,8 +2,8 @@
 	<div>
 		<q-form v-if="$form.$ready" :autofocus="autofocus" :greedy="greedy" :no-error-focus="noErrorFocus" :no-reset-focus="noResetFocus" @reset="onReset" @submit="onSubmit">
 			<slot>
-				<slot v-for="(field, name) in $form.fields" :key="name" :name="`form-field-`+name" v-bind="field">
-					<s-input :field="field" :field-name="name" lazy/>
+				<slot v-for="(field, fieldName) in $form.fields" :key="fieldName" :name="`form-field-`+fieldName" v-bind="field">
+					<s-input :field="field" :field-name="fieldName" lazy/>
 				</slot>
 				<div class="form-actions">
 					<slot name="actions">
