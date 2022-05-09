@@ -2,9 +2,15 @@
 	<q-list v-if="menuItems" padding>
 		<template v-for="(item, index) of menuItems" :key="index">
 			<q-expansion-item v-if="item?.children" :class="itemClasses" :icon="item.icon" :label="item.label">
-				<s-menu :inset="inset + 1" :items="item.children"></s-menu>
+				<s-menu :inset="inset + 1" :items="item.children"/>
 			</q-expansion-item>
-			<q-item v-else :class="itemClasses" :clickable="!!item.to" :to="item.to" @click="handleClick(item)">
+			<q-item
+				v-else
+				:class="itemClasses"
+				:clickable="!!item.to"
+				:to="item.to"
+				@click="handleClick(item)"
+			>
 				<q-item-section avatar>
 					<q-icon v-if="item.icon" :name="item.icon"/>
 					<q-img v-else-if="item.image" :src="item.image"/>
