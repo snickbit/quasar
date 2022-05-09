@@ -1,5 +1,14 @@
 # @snickbit/quasar-menu Changelog
 
+## 0.1.0
+
+### Minor Changes
+
+- [093238f](https://github.com/snickbit/quasar/commit/093238f) **chore**:  prettylint
+- [59c9a5f](https://github.com/snickbit/quasar/commit/59c9a5f) **fix**:  add key to iterator
+- [bd63f58](https://github.com/snickbit/quasar/commit/bd63f58) **build**:  bump indexer, regenerate indexes
+
+
 ## 0.0.21
 
 ### Patch Changes

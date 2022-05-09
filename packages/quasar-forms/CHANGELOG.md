@@ -1,5 +1,15 @@
 # @snickbit/quasar-forms Changelog
 
+## 0.1.0
+
+### Minor Changes
+
+- [15d03de](https://github.com/snickbit/quasar/commit/15d03de) build remove yarn
+- [9526eff](https://github.com/snickbit/quasar/commit/9526eff) **chore**:  prettylint
+- [1c0e5a9](https://github.com/snickbit/quasar/commit/1c0e5a9) **fix**:  rename "name" to "fieldName" to stop scope override
+- [bd63f58](https://github.com/snickbit/quasar/commit/bd63f58) **build**:  bump indexer, regenerate indexes
+
+
 ## 0.0.26
 
 ### Patch Changes

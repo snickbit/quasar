@@ -1,5 +1,15 @@
 # @snickbit/quasar Changelog
 
+## 0.2.0
+
+### Minor Changes
+
+- [d53a429](https://github.com/snickbit/quasar/commit/d53a429) **chore**:  remove deprecated dependency
+- [57b8a04](https://github.com/snickbit/quasar/commit/57b8a04) **chore**:  remove unused code
+- [de62609](https://github.com/snickbit/quasar/commit/de62609) **refactor**:  rewrite into typescript
+- [bd63f58](https://github.com/snickbit/quasar/commit/bd63f58) **build**:  bump indexer, regenerate indexes
+
+
 ## 0.1.48
 
 ### Patch Changes
