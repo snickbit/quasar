@@ -20,7 +20,7 @@
 		"watch": "vite build --watch",
 		"build": "vite build",
 		"depcheck": "depcheck",
-		"prod": "yarn index && vite build"
+		"prod": "indexer && vite build"
 	},
 	"dependencies": {
 		"@snickbit/minia": "^0.0.17",
