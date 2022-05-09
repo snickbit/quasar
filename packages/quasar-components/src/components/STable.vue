@@ -101,7 +101,6 @@ import {isEmpty} from '@snickbit/utilities'
 import {computed, useSlots, watch} from 'vue'
 import SImg from './SImg.vue'
 
-// noinspection TypeScriptCheckImport
 export interface STable {
 	title?: string
 	perPageOptions?: number[]
@@ -290,10 +289,6 @@ const headerSlots = computed(() => Object.keys($slots).filter(key => key.startsW
 
 function getSelectedString() {
 	return isEmpty($table.selected) ? '' : `${$table.selected.length} / ${$table.rows.length} selected`
-}
-
-function emitUpdate() {
-	$emit('update:table', $table)
 }
 </script>
 <style lang="scss">
