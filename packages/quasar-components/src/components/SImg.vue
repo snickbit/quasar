@@ -1,5 +1,14 @@
 <template>
-	<q-img :alt="alt" :class="{'cursor-pointer':canClickToExpand}" :fit="fit" :placeholder-src="placeholderSrc" :ratio="ratio" :src="src" @click="openDialog" @load="handleLoaded">
+	<q-img
+		:alt="alt"
+		:class="{'cursor-pointer':canClickToExpand}"
+		:fit="fit"
+		:placeholder-src="placeholderSrc"
+		:ratio="ratio"
+		:src="src"
+		@click="openDialog"
+		@load="handleLoaded"
+	>
 		<template #error>
 			<div class="flex-center bg-transparent fit">
 				<q-icon :name="icon" color="negative" size="lg"/>
@@ -16,48 +25,55 @@
 		<q-dialog :model-value="isExpanded" class="s-img--dialog" @update:model-value="closeDialog">
 			<div class="full-width">
 				<q-img :alt="alt" :src="expandSrc || src" fit="contain"/>
-				<q-btn v-close-popup class="absolute-top-right q-ma-sm" flat icon="close" round/>
+				<q-btn
+					v-close-popup
+					class="absolute-top-right q-ma-sm"
+					flat
+					icon="close"
+					round
+				/>
 			</div>
 		</q-dialog>
 	</q-img>
 </template>
-<script setup>
+<script lang="ts" setup>
 import {computed, ref, watch} from 'vue'
 
-const $props = defineProps({
-	src: String,
-	placeholderSrc: String,
-	expandSrc: String,
-	disableExpand: Boolean,
-	alt: String,
-	caption: String,
-	ratio: {
-		type: String,
-		default: '1'
-	},
-	fit: {
-		type: String,
-		default: 'contain'
-	},
-	icon: {
-		type: String,
-		default: 'image'
-	},
-	expanded: Boolean,
-	expandOnClick: {
-		type: Boolean,
-		default: true
-	}
-})
+interface Props {
+	alt?: string,
+	caption?: string,
+	disableExpand?: boolean,
+	expandOnClick?: boolean,
+	expandSrc?: string,
+	expanded?: boolean,
+	fit?: "cover" | "fill" | "contain" | "none" | "scale-down" | undefined
+	icon?: string,
+	placeholderSrc?: string,
+	ratio?: string,
+	src?: string,
+}
 
+const {
+	alt,
+	caption,
+	disableExpand,
+	expandOnClick = true,
+	expandSrc,
+	expanded,
+	fit = 'contain' as Props['fit'],
+	icon = 'image',
+	placeholderSrc,
+	ratio = '1',
+	src
+} = defineProps<Props>()
 const $emit = defineEmits(['update:expanded'])
 
 const loaded = ref(false)
 const isExpanded = ref(false)
 
-watch(() => $props.expanded, val => isExpanded.value = val)
+watch(() => expanded, val => isExpanded.value = val)
 
-const canClickToExpand = computed(() => loaded.value === true && $props.disableExpand !== true && $props.expandOnClick)
+const canClickToExpand = computed(() => loaded.value === true && disableExpand !== true && expandOnClick)
 
 function openDialog() {
 	if (canClickToExpand.value) {

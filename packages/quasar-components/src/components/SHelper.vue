@@ -1,20 +1,30 @@
 <template>
 	<div>
-		<q-btn :color="color" :dense="dense" :disable="disabled" :flat="flat" :icon="icon" :round="round" :size="size" :text-color="textColor" @click="isOpen = true">
+		<q-btn
+			:color="color"
+			:dense="dense"
+			:disable="disabled"
+			:flat="flat"
+			:icon="icon"
+			:round="round"
+			:size="size"
+			:text-color="textColor"
+			@click="isOpen = true"
+		>
 			<q-tooltip>
 				More Info
 			</q-tooltip>
 		</q-btn>
 		<q-dialog v-model="isOpen">
-			<q-card style="width: 100%;max-width: 80vw; min-width: 400px;">
+			<q-card class="s-helper-content">
 				<q-card-section>
-					<slot></slot>
+					<slot/>
 				</q-card-section>
 			</q-card>
 		</q-dialog>
 	</div>
 </template>
-<script setup>
+<script lang="ts" setup>
 import {ref} from 'vue'
 
 defineProps({
@@ -52,3 +62,10 @@ defineProps({
 
 const isOpen = ref(false)
 </script>
+<style lang="scss">
+.s-helper-content {
+	width: 100%;
+	max-width: 80vw;
+	min-width: 400px;
+}
+</style>

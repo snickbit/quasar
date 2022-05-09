@@ -1,72 +1,72 @@
 <template>
 	<div class="s-copy" @click="onCopy">
-		<slot></slot>
-		<q-tooltip :anchor="anchor" :class="{'bg-positive': copied, 'hidden': !tooltipLabel, 'visible': tooltipLabel}" :offset="offset" :self="self" @hide="copied=false">
+		<slot/>
+		<q-tooltip
+			:anchor="anchor"
+			:class="{'bg-positive': copied, 'hidden': !tooltipLabel, 'visible': tooltipLabel}"
+			:offset="offset"
+			:self="self"
+			@hide="copied=false"
+		>
 			{{ tooltipLabel }}
 		</q-tooltip>
 	</div>
 </template>
-<script setup>
+<script lang="ts" setup>
 import {isNullDefined} from '@snickbit/utilities'
-import {computed, ref, watch} from 'vue'
-import {copyHelper} from '../helpers'
+import {computed, ComputedRef, ref} from 'vue'
+import {copyHelper} from '../helpers/copy-helper'
 
-const $props = defineProps({
-	modelValue: {
-		type: [String, Number],
-		default: ''
-	},
-	anchor: {
-		type: String,
-		default: 'bottom middle'
-	},
-	self: {
-		type: String,
-		default: 'top middle'
-	},
-	offset: {
-		type: Array,
-		default: () => [0, 0]
-	},
-	copiedLabel: {
-		type: String,
-		default: 'Copied!'
-	},
-	label: {
-		type: [String, Boolean],
-		default: 'Copy to clipboard'
-	},
-	copiedTimeout: {
-		type: Number,
-		default: 2000
-	},
-	disableTooltip: Boolean
-})
+interface Props {
+	modelValue?: string | number
+	anchor?: 'top left' | 'top middle' | 'top right'
+		| 'top start' | 'top end' | 'center left'
+		| 'center middle' | 'center right' | 'center start'
+		| 'center end' | 'bottom left' | 'bottom middle'
+		| 'bottom right' | 'bottom start' | 'bottom end' | undefined
+	self?: 'top left' | 'top middle' | 'top right'
+		| 'top start' | 'top end' | 'center left'
+		| 'center middle' | 'center right' | 'center start'
+		| 'center end' | 'bottom left' | 'bottom middle'
+		| 'bottom right' | 'bottom start' | 'bottom end' | undefined
+	offset?: [number, number] | undefined
+	copiedLabel?: string
+	label?: string | false
+	copiedTimeout?: number
+	disableTooltip?: boolean
+}
+
+const {
+	modelValue = '',
+	anchor = 'bottom middle' as Props['anchor'],
+	self = 'top middle'  as Props['self'],
+	offset = [0, 0],
+	copiedLabel = 'Copied!',
+	label = 'Copy to clipboard',
+	copiedTimeout = 2000,
+	disableTooltip
+} = defineProps<Props>()
 
 const copied = ref(false)
 const copier = copyHelper(copied)
 
-const content = computed(() => !isNullDefined($props.modelValue) ? String($props.modelValue) : null)
+const content: ComputedRef<string | null> = computed(() => !isNullDefined(modelValue) ? String(modelValue) : null)
 
-const disabled = computed(() => !content.value || !content.value.length)
-const tooltipLabel = computed(() => {
+const disabled: ComputedRef<boolean> = computed(() => !content.value || !content.value.length)
+const tooltipLabel: ComputedRef<string> = computed(() => {
 	if (copied.value) {
-		return $props.copiedLabel
-	} else if (!$props.disableTooltip) {
-		return $props.label
+		return copiedLabel
+	} else if (!disableTooltip && label) {
+		return label
 	} else {
 		return ''
 	}
 })
 
-watch(tooltipLabel, (val) => {
-	console.log('tooltipLabel', val)
-})
-
 function onCopy() {
 	console.log('onCopy')
-	if (!disabled.value) {
-		copier.copy(content.value)
+	if (!disabled.value && content.value) {
+		copier.copy(content.value, copiedTimeout)
 	} else {
 		console.log('disabled')
 	}

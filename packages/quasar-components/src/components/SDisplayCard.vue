@@ -1,7 +1,7 @@
 <script>
-import useDark, {useDarkProps} from 'quasar/src/composables/private/use-dark.js'
-import useFullscreen, {useFullscreenEmits, useFullscreenProps} from 'quasar/src/composables/private/use-fullscreen.js'
-import {hSlot} from 'quasar/src/utils/private/render.js'
+import useDark, {useDarkProps} from 'quasar/src/composables/private/use-dark'
+import useFullscreen, {useFullscreenEmits, useFullscreenProps} from 'quasar/src/composables/private/use-fullscreen'
+import {hSlot} from 'quasar/src/utils/private/render'
 import {computed, defineComponent, getCurrentInstance, h} from 'vue'
 
 export default defineComponent({

@@ -1,5 +1,12 @@
 <template>
-	<s-copy v-if="value || showNull" v-ripple :disable-tooltip="!tooltip" :label="tooltipLabel" :model-value="value" class="s-item-detail rounded-borders col">
+	<s-copy
+		v-if="value || showNull"
+		v-ripple
+		:disable-tooltip="!tooltip"
+		:label="tooltipLabel"
+		:model-value="value"
+		class="s-item-detail rounded-borders col"
+	>
 		<div v-if="hasLabel">
 			<slot name="label">
 				<span class="text-muted s-item-detail__label">{{ label }}</span>
@@ -13,9 +20,9 @@
 		</div>
 	</s-copy>
 </template>
-<script setup>
+<script lang="ts" setup>
 import {computed, useSlots} from 'vue'
-import SCopy from './SCopy'
+import SCopy from './SCopy.vue'
 
 const $props = defineProps({
 	label: {

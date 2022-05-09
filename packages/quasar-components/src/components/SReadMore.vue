@@ -1,63 +1,58 @@
 <template>
 	<div class="read-more">
-		<div :style="read_more ? '' : 'max-height:' + maxHeight + 'px; overflow: hidden;'">
+		<div :style="toggled ? '' : 'max-height:' + maxHeight + 'px; overflow: hidden;'">
 			<div ref="content">
-				<slot></slot>
+				<slot/>
 			</div>
 		</div>
 		<div v-if="enabled" class="text-right">
-			<a v-if="link" href="#" @click.stop.prevent="read_more = !read_more">
-				{{ read_more ? lessText : moreText }}
+			<a v-if="link" href="#" @click.stop.prevent="toggle()">
+				{{ toggled ? lessText : moreText }}
 			</a>
-			<q-btn v-else :color="color" :size="buttonSize" @click="read_more = !read_more">
-				{{ read_more ? lessText : moreText }}
+			<q-btn v-else :color="color" :size="buttonSize" @click="toggle()">
+				{{ toggled ? lessText : moreText }}
 			</q-btn>
 		</div>
 	</div>
 </template>
-<script>
-import {defineComponent, ref, watch} from 'vue'
+<script lang="ts" setup>
+import {computed, ref, watch} from 'vue'
 
-export default defineComponent({
-	name: 'SReadMore',
-	props: {
-		modelValue: {},
-		maxHeight: {
-			default: 51
-		},
-		color: {
-			default: 'primary'
-		},
-		buttonSize: {
-			type: String,
-			default: 'md'
-		},
-		moreText: {
-			default: 'Read More'
-		},
-		lessText: {
-			default: 'Read Less'
-		},
-		link: Boolean
-	},
-	setup(props) {
-		const content = ref(null)
-		const enabled = ref(false)
-		const read_more = ref(false)
+interface Props {
+	modelValue?: boolean
+	maxHeight?: number
+	color?: string
+	buttonSize?: string
+	moreText?: string
+	lessText?: string
+	link?: boolean
+}
 
-		const checkEnabled = () => {
-			enabled.value = props.modelValue === undefined ? content.value.offsetHeight > props.maxHeight : props.modelValue
-			read_more.value = !enabled.value
-		}
+const {
+	modelValue,
+	maxHeight = 51,
+	color = 'primary',
+	buttonSize = 'md',
+	moreText = 'Read More',
+	lessText = 'Read Less',
+	link = false
+} = defineProps<Props>()
 
-		watch(() => props.modelValue, () => checkEnabled())
-		watch(content, () => checkEnabled())
+const content = ref(null)
+// const enabled = ref(false)
+const toggled = ref(false)
+const enabled = computed(() => modelValue === undefined ? content.value.offsetHeight > maxHeight : modelValue)
 
-		return {
-			content,
-			enabled,
-			read_more
-		}
+function toggle(){
+	toggled.value = !toggled.value
+}
+
+function checkEnabled() {
+	if(!enabled.value && toggled.value) {
+		toggled.value = false
 	}
-})
+}
+
+watch(() => modelValue, () => checkEnabled())
+watch(content, () => checkEnabled())
 </script>

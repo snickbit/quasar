@@ -9,9 +9,9 @@
 			</s-heading>
 		</slot>
 		<div v-if="$slots.description">
-			<slot name="description"></slot>
+			<slot name="description"/>
 		</div>
-		<q-layout container style="min-height: 500px" view="lhh LpR lff">
+		<q-layout class="s-display-frame-layout" container view="lhh LpR lff">
 			<slot/>
 		</q-layout>
 	</s-display-card>
@@ -38,3 +38,8 @@ export default {
 	}
 }
 </script>
+<style lang="scss">
+.s-display-frame-layout{
+	min-height: 500px
+}
+</style>

@@ -1,7 +1,13 @@
 <template>
-	<q-select filled hide-selected map-options multiple v-bind="$attrs">
+	<q-select
+		filled
+		hide-selected
+		map-options
+		multiple
+		v-bind="$attrs"
+	>
 		<template v-for="(data, key) in $slots" #[key]="props">
-			<slot :name="key" v-bind="props"></slot>
+			<slot :name="key" v-bind="props"/>
 		</template>
 		<template v-if="multiple" #option="{ itemProps, opt, selected, toggleOption }">
 			<q-item v-bind="itemProps">
@@ -20,11 +26,13 @@
 		</template>
 	</q-select>
 </template>
-<script setup>
+<script lang="ts" setup>
 import {QSelect} from 'quasar'
 
-defineProps({
-	checkbox: Boolean,
-	multiple: Boolean
-})
+interface Props {
+	checkbox?: boolean,
+	multiple?: boolean
+}
+
+defineProps<Props>()
 </script>

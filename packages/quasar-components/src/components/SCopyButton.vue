@@ -1,11 +1,25 @@
 <template>
-	<s-copy :anchor="anchor" :copied-label="copiedLabel" :copied-timeout="copiedTimeout" :label="label" :model-value="content" :offset="offset" :self="self">
-		<q-btn :dense="dense" :disable="disabled" :flat="flat" :icon="icon" :round="round"/>
+	<s-copy
+		:anchor="anchor"
+		:copied-label="copiedLabel"
+		:copied-timeout="copiedTimeout"
+		:label="label"
+		:model-value="content"
+		:offset="offset"
+		:self="self"
+	>
+		<q-btn
+			:dense="dense"
+			:disable="disabled"
+			:flat="flat"
+			:icon="icon"
+			:round="round"
+		/>
 	</s-copy>
 </template>
-<script setup>
+<script lang="ts" setup>
 import {computed} from 'vue'
-import SCopy from './SCopy'
+import SCopy from './SCopy.vue'
 
 const $props = defineProps({
 	content: {
