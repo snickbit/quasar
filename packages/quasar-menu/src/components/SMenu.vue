@@ -1,6 +1,6 @@
 <template>
 	<q-list v-if="menuItems" padding>
-		<template v-for="item of menuItems">
+		<template v-for="(item, index) of menuItems" :key="index">
 			<q-expansion-item v-if="item?.children" :class="itemClasses" :icon="item.icon" :label="item.label">
 				<s-menu :inset="inset + 1" :items="item.children"></s-menu>
 			</q-expansion-item>
