@@ -35,7 +35,6 @@
 	"dependencies": {
 		"@quasar/extras": "^1.13.5",
 		"@snickbit/utilities": "^3.0.17",
-		"mitt": "^3.0.0",
 		"quasar": "^2.6.6",
 		"vue": "^3.2.33",
 		"vue-router": "^4.0.14"
