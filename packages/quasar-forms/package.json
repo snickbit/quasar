@@ -15,7 +15,7 @@
 		"dist"
 	],
 	"scripts": {
-		"index": "indexer src",
+		"index": "indexer",
 		"clean": "shx rm -rf dist",
 		"watch": "vite build --watch",
 		"build": "vite build",
@@ -31,7 +31,7 @@
 	},
 	"devDependencies": {
 		"@quasar/vite-plugin": "^1.0.9",
-		"@remedyred/indexer": "^2.0.79",
+		"@remedyred/indexer": "^2.1.1",
 		"@vitejs/plugin-vue": "^2.3.1",
 		"sass": "1.51.0",
 		"shx": "^0.3.4",

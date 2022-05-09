@@ -24,7 +24,7 @@
 		"src"
 	],
 	"scripts": {
-		"index": "indexer src",
+		"index": "indexer",
 		"clean": "shx rm -rf dist",
 		"watch": "vite build --watch",
 		"build:styles": "bundle-scss -m ./src/styles/variabes.scss -d ./dist/variables.scss",
@@ -42,7 +42,7 @@
 	},
 	"devDependencies": {
 		"@quasar/vite-plugin": "^1.0.9",
-		"@remedyred/indexer": "^2.0.79",
+		"@remedyred/indexer": "^2.1.1",
 		"@vitejs/plugin-vue": "^2.3.1",
 		"bundle-scss": "^1.5.1",
 		"sass": "^1.51.0",
