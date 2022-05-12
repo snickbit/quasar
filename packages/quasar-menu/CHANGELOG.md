@@ -1,5 +1,11 @@
 # @snickbit/quasar-menu Changelog
 
+## 0.1.1
+
+### Patch Changes
+
+- [b63a013](https://github.com/snickbit/quasar/commit/b63a013) **chore**:  bump deps
+
 ## 0.1.0
 
 ### Minor Changes
@@ -8,14 +14,12 @@
 - [59c9a5f](https://github.com/snickbit/quasar/commit/59c9a5f) **fix**:  add key to iterator
 - [bd63f58](https://github.com/snickbit/quasar/commit/bd63f58) **build**:  bump indexer, regenerate indexes
 
-
 ## 0.0.21
 
 ### Patch Changes
 
 - [fd4cdcf](https://github.com/snickbit/quasar/commit/fd4cdcf) **chore**(dep):  update dependencies
 - [79cfafb](https://github.com/snickbit/quasar/commit/79cfafb) **style**:  reformat
-
 
 ## 0.0.20
 
