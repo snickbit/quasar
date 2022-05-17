@@ -64,11 +64,8 @@ const tooltipLabel: ComputedRef<string> = computed(() => {
 })
 
 function onCopy() {
-	console.log('onCopy')
 	if (!disabled.value && content.value) {
 		copier.copy(content.value, copiedTimeout)
-	} else {
-		console.log('disabled')
 	}
 }
 </script>

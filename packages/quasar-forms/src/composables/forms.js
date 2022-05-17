@@ -80,7 +80,6 @@ export function createForm(...args) {
 						for (let field_name of field_names) {
 							results[field_name] = this.validate(field_name)
 						}
-						console.log('validation results', results)
 						this.$state.valid = Object.values(results).every(result => result === true)
 						if (!this.$state.valid) {
 							this.$state.errors = objectFilter(results, result => isString(result))
