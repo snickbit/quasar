@@ -1,5 +1,11 @@
 # @snickbit/quasar-forms Changelog
 
+## 0.1.2
+
+### Patch Changes
+
+- [1b62429](https://github.com/snickbit/quasar/commit/1b62429) **fix**:  remove debugging console logs
+
 ## 0.1.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @snickbit/quasar Changelog
 
+## 0.2.1
+
+### Patch Changes
+
+- [1b62429](https://github.com/snickbit/quasar/commit/1b62429) **fix**:  remove debugging console logs
+
 ## 0.2.0
 
 ### Minor Changes
@@ -9,7 +15,6 @@
 - [de62609](https://github.com/snickbit/quasar/commit/de62609) **refactor**:  rewrite into typescript
 - [bd63f58](https://github.com/snickbit/quasar/commit/bd63f58) **build**:  bump indexer, regenerate indexes
 
-
 ## 0.1.48
 
 ### Patch Changes
@@ -17,7 +22,6 @@
 - [fd4cdcf](https://github.com/snickbit/quasar/commit/fd4cdcf) **chore**(dep):  update dependencies
 - [79cfafb](https://github.com/snickbit/quasar/commit/79cfafb) **style**:  reformat
 - [cbea8fc](https://github.com/snickbit/quasar/commit/cbea8fc) **chore**:  update dependencies
-
 
 ## 0.1.47
 
