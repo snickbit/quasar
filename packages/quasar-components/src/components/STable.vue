@@ -205,7 +205,6 @@ export interface STablePagination {
 	rowsNumber?: number;
 }
 
-
 const $slots = useSlots()
 
 interface Props {
