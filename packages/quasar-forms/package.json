@@ -1,26 +1,26 @@
 {
 	"name": "@snickbit/quasar-forms",
-	"description": "Quasar form generation",
 	"version": "0.1.2",
+	"description": "Quasar form generation",
 	"license": "MIT",
-	"main": "./dist/snickbit-quasar-forms.umd.js",
-	"module": "./dist/snickbit-quasar-forms.es.js",
 	"exports": {
 		".": {
 			"import": "./dist/snickbit-quasar-forms.es.js",
 			"require": "./dist/snickbit-quasar-forms.umd.js"
 		}
 	},
+	"main": "./dist/snickbit-quasar-forms.umd.js",
+	"module": "./dist/snickbit-quasar-forms.es.js",
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"index": "indexer",
-		"clean": "shx rm -rf dist",
-		"watch": "vite build --watch",
 		"build": "vite build",
+		"clean": "shx rm -rf dist",
 		"depcheck": "depcheck",
-		"prod": "indexer && vite build"
+		"index": "indexer",
+		"prod": "indexer && vite build",
+		"watch": "vite build --watch"
 	},
 	"dependencies": {
 		"@snickbit/minia": "^0.0.20",

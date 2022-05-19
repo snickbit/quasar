@@ -1,10 +1,8 @@
 {
 	"name": "@snickbit/quasar",
-	"description": "My custom Quasar components. Use with caution.",
 	"version": "0.2.1",
+	"description": "My custom Quasar components. Use with caution.",
 	"license": "MIT",
-	"main": "./dist/snickbit-quasar.umd.js",
-	"module": "./dist/snickbit-quasar.es.js",
 	"exports": {
 		".": {
 			"import": "./dist/snickbit-quasar.es.js",
@@ -19,18 +17,20 @@
 			"require": "./dist/variables.scss"
 		}
 	},
+	"main": "./dist/snickbit-quasar.umd.js",
+	"module": "./dist/snickbit-quasar.es.js",
 	"files": [
 		"dist",
 		"src"
 	],
 	"scripts": {
-		"index": "indexer",
-		"clean": "shx rm -rf dist",
-		"watch": "vite build --watch",
-		"build:styles": "bundle-scss -m ./src/styles/variabes.scss -d ./dist/variables.scss",
 		"build:js": "vite build",
+		"build:styles": "bundle-scss -m ./src/styles/variabes.scss -d ./dist/variables.scss",
+		"clean": "shx rm -rf dist",
 		"depcheck": "depcheck",
-		"prod": "npm run index && npm run build:js && npm run build:styles"
+		"index": "indexer",
+		"prod": "npm run index && npm run build:js && npm run build:styles",
+		"watch": "vite build --watch"
 	},
 	"dependencies": {
 		"@quasar/extras": "^1.13.5",

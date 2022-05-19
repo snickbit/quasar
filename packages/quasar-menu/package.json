@@ -1,26 +1,26 @@
 {
 	"name": "@snickbit/quasar-menu",
-	"description": "Quasar sidebar menu generation using @snickbit/minia",
 	"version": "0.1.2",
+	"description": "Quasar sidebar menu generation using @snickbit/minia",
 	"license": "MIT",
-	"main": "./dist/snickbit-quasar-menu.umd.js",
-	"module": "./dist/snickbit-quasar-menu.es.js",
 	"exports": {
 		".": {
 			"import": "./dist/snickbit-quasar-menu.es.js",
 			"require": "./dist/snickbit-quasar-menu.umd.js"
 		}
 	},
+	"main": "./dist/snickbit-quasar-menu.umd.js",
+	"module": "./dist/snickbit-quasar-menu.es.js",
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"index": "indexer",
-		"clean": "shx rm -rf dist",
-		"watch": "vite build --watch --mode 'development",
 		"build": "vite build",
+		"clean": "shx rm -rf dist",
 		"depcheck": "depcheck",
-		"prod": "npm run index && vite build"
+		"index": "indexer",
+		"prod": "npm run index && vite build",
+		"watch": "vite build --watch --mode 'development"
 	},
 	"dependencies": {
 		"@snickbit/minia": "^0.0.20",
