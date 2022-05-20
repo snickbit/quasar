@@ -11,9 +11,9 @@
 
 ## Table of Contents
 
-- [@snickbit/quasar](#snickbit-quasar)
-- [@snickbit/quasar-forms](#snickbit-quasar-forms)
-- [@snickbit/quasar-menu](#snickbit-quasar-menu)
+  - [@snickbit/quasar](#snickbit-quasar)
+  - [@snickbit/quasar-forms](#snickbit-quasar-forms)
+  - [@snickbit/quasar-menu](#snickbit-quasar-menu)
 
 <!--END_SECTION:readmes-toc-->
 
