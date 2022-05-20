@@ -36,11 +36,5 @@
 		"sass": "^1.51.0",
 		"shx": "^0.3.4",
 		"vite": "^2.9.5"
-	},
-	"nx": {
-		"implicitDependencies": [
-			"@snickbit/minia",
-			"@snickbit/utilities"
-		]
 	}
 }
