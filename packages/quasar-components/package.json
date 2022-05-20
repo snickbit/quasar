@@ -44,7 +44,7 @@
 		"@remedyred/indexer": "^2.2.6",
 		"@vitejs/plugin-vue": "^2.3.1",
 		"bundle-scss": "^1.5.1",
-		"sass": "^1.51.0",
+		"sass": "^1.52.0",
 		"shx": "^0.3.4",
 		"vite": "^2.9.5"
 	}
