@@ -1,5 +1,15 @@
 # @snickbit/quasar Changelog
 
+## 0.2.2
+
+### Patch Changes
+
+- [bad67a7](https://github.com/snickbit/quasar/commit/bad67a7) **chore**:  update dependencies
+- [8d03325](https://github.com/snickbit/quasar/commit/8d03325) **build**:  remove nx
+- [a5f9aa8](https://github.com/snickbit/quasar/commit/a5f9aa8) **style**:  sort package.json
+- [8dc5689](https://github.com/snickbit/quasar/commit/8dc5689) **style**:  relint
+- [b85cfca](https://github.com/snickbit/quasar/commit/b85cfca) **chore**:  update indexer and indexer config
+
 ## 0.2.1
 
 ### Patch Changes
