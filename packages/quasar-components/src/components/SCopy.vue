@@ -15,7 +15,7 @@
 <script lang="ts" setup>
 import {isNullDefined} from '@snickbit/utilities'
 import {computed, ComputedRef, ref} from 'vue'
-import {copyHelper} from '../helpers/copy-helper'
+import {useCopyHelper} from '../composables/use-copy-helper'
 
 interface Props {
 	modelValue?: string | number
@@ -48,7 +48,7 @@ const {
 } = defineProps<Props>()
 
 const copied = ref(false)
-const copier = copyHelper(copied)
+const copier = useCopyHelper(copied)
 
 const content: ComputedRef<string | null> = computed(() => !isNullDefined(modelValue) ? String(modelValue) : null)
 
