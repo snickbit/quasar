@@ -25,7 +25,7 @@
 	],
 	"scripts": {
 		"build:js": "vite build",
-		"build:styles": "bundle-scss -m ./src/styles/variabes.scss -d ./dist/variables.scss",
+		"build:styles": "bundle-scss -m ./src/styles/variables.scss -d ./dist/variables.scss",
 		"clean": "shx rm -rf dist",
 		"depcheck": "depcheck",
 		"index": "indexer",
