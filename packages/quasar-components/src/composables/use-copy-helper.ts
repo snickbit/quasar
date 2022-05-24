@@ -1,7 +1,7 @@
 import {copyToClipboard} from 'quasar'
 import {Ref, UnwrapRef} from 'vue'
 
-export function copyHelper(copiedRef?: Ref<UnwrapRef<boolean>>): CopyHelper {
+export function useCopyHelper(copiedRef?: Ref<UnwrapRef<boolean>>): CopyHelper {
 	return new CopyHelper(copiedRef)
 }
 
