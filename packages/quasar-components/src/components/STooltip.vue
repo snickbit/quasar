@@ -3,3 +3,4 @@
 		<slot/>
 	</q-tooltip>
 </template>
+<script setup lang="ts"></script>
