@@ -29,7 +29,7 @@
 		"clean": "shx rm -rf dist",
 		"depcheck": "depcheck",
 		"index": "indexer",
-		"prod": "npm run index && npm run build:js && npm run build:styles",
+		"prod": "pnpm run index && pnpm run build:js && pnpm run build:styles",
 		"watch": "vite build --watch"
 	},
 	"dependencies": {

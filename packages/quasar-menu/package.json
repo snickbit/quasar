@@ -19,7 +19,7 @@
 		"clean": "shx rm -rf dist",
 		"depcheck": "depcheck",
 		"index": "indexer",
-		"prod": "npm run index && vite build",
+		"prod": "pnpm run index && vite build",
 		"watch": "vite build --watch --mode 'development"
 	},
 	"dependencies": {
