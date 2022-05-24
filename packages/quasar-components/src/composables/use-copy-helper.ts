@@ -24,6 +24,3 @@ export class CopyHelper {
 		}).catch(err => console.error(err))
 	}
 }
-
-
-export default {copyHelper, CopyHelper}
