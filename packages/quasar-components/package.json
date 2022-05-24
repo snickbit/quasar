@@ -24,13 +24,16 @@
 		"src"
 	],
 	"scripts": {
-		"build:js": "vite build",
-		"build:styles": "bundle-scss -m ./src/styles/variables.scss -d ./dist/variables.scss",
+		"build": "concurrently -n vite,styles \"pnpm run build:vite\" \"pnpm run build:styles\"",
+		"build:styles": "node bundle-scss.mjs",
+		"build:vite": "vite build",
 		"clean": "shx rm -rf dist",
 		"depcheck": "depcheck",
 		"index": "indexer",
-		"prod": "pnpm run index && pnpm run build:js && pnpm run build:styles",
-		"watch": "vite build --watch"
+		"prod": "pnpm run index && pnpm run build:vite && pnpm run build:styles",
+		"watch": "concurrently -n vite,styles \"pnpm run watch:vite\" \"pnpm run watch:styles\"",
+		"watch:styles": "pnpm run build:styles --watch",
+		"watch:vite": "pnpm run build:vite --watch"
 	},
 	"dependencies": {
 		"@quasar/extras": "^1.13.5",
@@ -40,12 +43,16 @@
 		"vue-router": "^4.0.14"
 	},
 	"devDependencies": {
-		"@quasar/vite-plugin": "^1.0.9",
-		"@remedyred/indexer": "^2.2.6",
-		"@vitejs/plugin-vue": "^2.3.1",
+		"@quasar/vite-plugin": "^1.0.10",
+		"@remedyred/indexer": "^2.2.8",
+		"@snickbit/node-cli": "^1.0.49",
+		"@snickbit/out": "^2.0.26",
+		"@vitejs/plugin-vue": "^2.3.3",
 		"bundle-scss": "^1.5.1",
-		"sass": "^1.52.0",
+		"chokidar": "^3.5.3",
+		"concurrently": "^7.1.0",
+		"sass": "^1.52.1",
 		"shx": "^0.3.4",
-		"vite": "^2.9.5"
+		"vite": "^2.9.9"
 	}
 }
