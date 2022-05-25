@@ -15,7 +15,11 @@
 		"utilities",
 		"vue-loader",
 		"vue-router",
-		"@quasar/extras"
+		"@quasar/extras",
+		"@snickbit/node-cli",
+		"@snickbit/out",
+		"chokidar",
+		"concurrently"
 	],
 	"oneline": true,
 	"ignore-bin-package": true
