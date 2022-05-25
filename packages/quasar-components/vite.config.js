@@ -36,7 +36,8 @@ export default defineConfig({
 	},
 	plugins: [
 		vue({
-			template: {transformAssetUrls}
+			template: {transformAssetUrls},
+			reactivityTransform: true
 		}),
 
 		quasar({
