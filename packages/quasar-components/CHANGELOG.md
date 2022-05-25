@@ -1,5 +1,11 @@
 # @snickbit/quasar Changelog
 
+## 0.2.4
+
+### Patch Changes
+
+- [12a9ccf](https://github.com/snickbit/quasar/commit/12a9ccf) **fix**:  typo
+
 ## 0.2.3
 
 ### Patch Changes
