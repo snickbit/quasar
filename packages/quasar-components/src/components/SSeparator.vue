@@ -14,7 +14,7 @@ interface Props {
 	spaced?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'none'
 }
 
-const {vertical, inset = true, spaced = 'xl'} = defineProps<Props>()
+const {vertical, inset = true, spaced = 'md'} = defineProps<Props>()
 
 const classes = ref<string[]>([])
 
