@@ -1,12 +1,12 @@
 {
 	"source": [
-		"src/components/**/*.{ts,vue}",
+		"src/components/**/*.vue",
 		"src/composables/**/*.ts",
-		"src/layouts/**/*.{ts,vue}"
+		"src/layouts/**/*.vue"
 	],
 	"output": "src/ui.ts",
 	"type": "default",
 	"overrides": {
-		"src/composables/use-copy-helper.ts": "wildcard"
+		"src/composables/*.ts": "wildcard"
 	}
 }
