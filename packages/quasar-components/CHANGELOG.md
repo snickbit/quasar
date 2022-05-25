@@ -1,5 +1,29 @@
 # @snickbit/quasar Changelog
 
+## 0.2.3
+
+### Patch Changes
+
+- [6e4c4be](https://github.com/snickbit/quasar/commit/6e4c4be) **fix**:  adjust default SPage options
+- [89ddf50](https://github.com/snickbit/quasar/commit/89ddf50) **refactor**:  move STable
+- [7b8cad5](https://github.com/snickbit/quasar/commit/7b8cad5) **chore**:  update indexer config
+- [31fefdb](https://github.com/snickbit/quasar/commit/31fefdb) **build**:  enable reactivityTransform option
+- [9c29808](https://github.com/snickbit/quasar/commit/9c29808) **fix**:  implement useCopyHelper in SCopy
+- [8f01589](https://github.com/snickbit/quasar/commit/8f01589) **refactor**:  restructure ui index
+- [bb18fe1](https://github.com/snickbit/quasar/commit/bb18fe1) **refactor**:  move copy helper to composable
+- [b1c5f43](https://github.com/snickbit/quasar/commit/b1c5f43) **feat**:  add SSeperator component
+- [6a7a95f](https://github.com/snickbit/quasar/commit/6a7a95f) **fix**:  improve STooltip
+- [722fa3c](https://github.com/snickbit/quasar/commit/722fa3c) **chore**:  bump dependencies
+- [f385a80](https://github.com/snickbit/quasar/commit/f385a80) **fix**:  update indexer, export copyHelper as camelCase
+- [41a6aab](https://github.com/snickbit/quasar/commit/41a6aab) **fix**:  add script setup to properly export
+- [aacded9](https://github.com/snickbit/quasar/commit/aacded9) **feat**:  add SPage layout
+- [afe95f6](https://github.com/snickbit/quasar/commit/afe95f6) **build**:  overhaul build to allow for full installation
+- [e5a4e53](https://github.com/snickbit/quasar/commit/e5a4e53) **fix**:  add default export
+- [fc5229d](https://github.com/snickbit/quasar/commit/fc5229d) **build**:  add watchable build script for scss variables
+- [3cddd1f](https://github.com/snickbit/quasar/commit/3cddd1f) **fix**:  incorrectly named file
+- [b211e96](https://github.com/snickbit/quasar/commit/b211e96) **build**:  switch to pnpm
+- [84a45f7](https://github.com/snickbit/quasar/commit/84a45f7) **feat**:  add container atomic class
+
 ## 0.2.2
 
 ### Patch Changes
