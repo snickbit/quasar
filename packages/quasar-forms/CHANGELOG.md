@@ -1,5 +1,15 @@
 # @snickbit/quasar-forms Changelog
 
+## 0.1.5
+
+### Patch Changes
+
+- [cacf3d6](https://github.com/snickbit/quasar/commit/cacf3d6) **chore**(release):  publish
+- [87d973a](https://github.com/snickbit/quasar/commit/87d973a) **style**:  heavy code restyling
+- [41fec90](https://github.com/snickbit/quasar/commit/41fec90) **chore**:  bump dependencies
+- [95f605a](https://github.com/snickbit/quasar/commit/95f605a) **chore**:  bump indexer version, and rerun
+- [30087c3](https://github.com/snickbit/quasar/commit/30087c3) **chore**:  bump indexer version
+
 ## 0.1.4
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
 	"name": "@snickbit/quasar",
-	"version": "0.2.5",
+	"version": "0.2.6",
 	"description": "My custom Quasar components. Use with caution.",
 	"license": "MIT",
 	"exports": {
