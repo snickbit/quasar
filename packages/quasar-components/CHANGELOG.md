@@ -1,5 +1,14 @@
 # @snickbit/quasar Changelog
 
+## 0.2.5
+
+### Patch Changes
+
+- [87d973a](https://github.com/snickbit/quasar/commit/87d973a) **style**:  heavy code restyling
+- [95f605a](https://github.com/snickbit/quasar/commit/95f605a) **chore**:  bump indexer version, and rerun
+- [30087c3](https://github.com/snickbit/quasar/commit/30087c3) **chore**:  bump indexer version
+- [e5bbe56](https://github.com/snickbit/quasar/commit/e5bbe56) **fix**:  set default spacing to md
+
 ## 0.2.4
 
 ### Patch Changes
