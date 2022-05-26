@@ -9,9 +9,7 @@
 import {computed} from 'vue'
 
 const $props = defineProps({
-	label: {
-		type: String
-	},
+	label: {type: String},
 	color: {
 		type: String,
 		default: 'primary'
@@ -19,10 +17,7 @@ const $props = defineProps({
 })
 
 const badgeClasses = computed(() => {
-	return [
-		's-big-badge',
-		'bg-' + $props.color
-	]
+	return ['s-big-badge', `bg-${$props.color}`]
 })
 </script>
 <style lang="scss" scoped>

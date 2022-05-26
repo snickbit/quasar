@@ -48,7 +48,9 @@ const $slots = useSlots()
 const hasLabel = computed(() => $slots.label || $props.label)
 const valueClass = computed(() => {
 	const classes = ['s-item-detail__value']
-	if ($props.size) classes.push(`text-${$props.size}`)
+	if ($props.size) {
+		classes.push(`text-${$props.size}`)
+	}
 	return classes
 })
 </script>

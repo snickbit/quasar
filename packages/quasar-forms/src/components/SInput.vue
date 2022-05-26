@@ -43,9 +43,7 @@ const $props = defineProps({
 		type: Object,
 		required: true
 	},
-	fieldName: {
-		type: String
-	},
+	fieldName: {type: String},
 	lazy: Boolean
 })
 

@@ -40,17 +40,17 @@
 import {computed, ref, watch} from 'vue'
 
 interface Props {
-	alt?: string,
-	caption?: string,
-	disableExpand?: boolean,
-	expandOnClick?: boolean,
-	expandSrc?: string,
-	expanded?: boolean,
-	fit?: "cover" | "fill" | "contain" | "none" | "scale-down" | undefined
-	icon?: string,
-	placeholderSrc?: string,
-	ratio?: string,
-	src?: string,
+	alt?: string
+	caption?: string
+	disableExpand?: boolean
+	expandOnClick?: boolean
+	expandSrc?: string
+	expanded?: boolean
+	fit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down' | undefined
+	icon?: string
+	placeholderSrc?: string
+	ratio?: string
+	src?: string
 }
 
 const {

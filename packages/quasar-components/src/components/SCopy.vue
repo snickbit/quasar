@@ -18,17 +18,9 @@ import {computed, ComputedRef, ref} from 'vue'
 import {useCopyHelper} from '../composables/use-copy-helper'
 
 interface Props {
-	modelValue?: string | number
-	anchor?: 'top left' | 'top middle' | 'top right'
-		| 'top start' | 'top end' | 'center left'
-		| 'center middle' | 'center right' | 'center start'
-		| 'center end' | 'bottom left' | 'bottom middle'
-		| 'bottom right' | 'bottom start' | 'bottom end' | undefined
-	self?: 'top left' | 'top middle' | 'top right'
-		| 'top start' | 'top end' | 'center left'
-		| 'center middle' | 'center right' | 'center start'
-		| 'center end' | 'bottom left' | 'bottom middle'
-		| 'bottom right' | 'bottom start' | 'bottom end' | undefined
+	modelValue?: number | string
+	anchor?: 'bottom end' | 'bottom left' | 'bottom middle' | 'bottom right' | 'bottom start' | 'center end' | 'center left' | 'center middle' | 'center right' | 'center start' | 'top end' | 'top left' | 'top middle' | 'top right' | 'top start' | undefined
+	self?: 'bottom end' | 'bottom left' | 'bottom middle' | 'bottom right' | 'bottom start' | 'center end' | 'center left' | 'center middle' | 'center right' | 'center start' | 'top end' | 'top left' | 'top middle' | 'top right' | 'top start' | undefined
 	offset?: [number, number] | undefined
 	copiedLabel?: string
 	label?: string | false
@@ -39,7 +31,7 @@ interface Props {
 const {
 	modelValue = '',
 	anchor = 'bottom middle' as Props['anchor'],
-	self = 'top middle'  as Props['self'],
+	self = 'top middle' as Props['self'],
 	offset = [0, 0],
 	copiedLabel = 'Copied!',
 	label = 'Copy to clipboard',
@@ -58,9 +50,8 @@ const tooltipLabel: ComputedRef<string> = computed(() => {
 		return copiedLabel
 	} else if (!disableTooltip && label) {
 		return label
-	} else {
-		return ''
 	}
+	return ''
 })
 
 function onCopy() {

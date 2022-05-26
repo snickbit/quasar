@@ -62,9 +62,9 @@
 </template>
 <script setup>
 import {count, isEmpty, isString, objectFilter} from '@snickbit/utilities'
-import SInput from 'src/components/SInput'
 import {computed, ref} from 'vue'
 import {useForm} from '../composables/forms'
+import SInput from 'src/components/SInput'
 
 const $props = defineProps({
 	name: {
@@ -91,7 +91,7 @@ const error = ref('')
 
 let $form = useForm($props.name)
 const fieldsFilled = computed(() => $form && count(objectFilter($form.fields, field => !isEmpty(field.value))))
-const actionButtonClasses = computed(() => ({'col': [$props.submit, $props.reset, $props.cancel].filter(v => v !== false).length > 1}))
+const actionButtonClasses = computed(() => ({col: [$props.submit, $props.reset, $props.cancel].filter(v => v !== false).length > 1}))
 
 if (!$props.name) {
 	error.value = 'No form name provided'

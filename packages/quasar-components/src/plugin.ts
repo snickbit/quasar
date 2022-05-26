@@ -8,11 +8,10 @@ export interface PluginInstance {
 	install: (app: App) => void
 }
 
-export default function (components?: ComponentType[]): PluginInstance {
+export default function(components?: ComponentType[]): PluginInstance {
 	const installTargets: App[] = []
 
 	function registerComponent(app: App, name: string, component: ComponentType): void {
-
 		const registered = app.component(name)
 
 		if (!registered) {
@@ -21,11 +20,13 @@ export default function (components?: ComponentType[]): PluginInstance {
 	}
 
 	function install(app: App): void {
-		if (installTargets.includes(app)) return
+		if (installTargets.includes(app)) {
+			return
+		}
 
 		installTargets.push(app)
 
-		components.forEach((component) => {
+		components.forEach(component => {
 			const {name, alias} = component
 			registerComponent(app, name, component)
 			if (alias) {

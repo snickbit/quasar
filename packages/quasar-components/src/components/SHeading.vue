@@ -27,15 +27,13 @@ export default defineComponent({
 		}
 	},
 	setup(props) {
-		let classes = ['text-' + props.size]
+		let classes = [`text-${props.size}`]
 
 		if (props.center) {
 			classes.push('text-center')
 		}
 
-		return {
-			classes
-		}
+		return {classes}
 	}
 })
 </script>

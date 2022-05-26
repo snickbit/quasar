@@ -43,12 +43,12 @@ const content = ref(null)
 const toggled = ref(false)
 const enabled = computed(() => modelValue === undefined ? content.value.offsetHeight > maxHeight : modelValue)
 
-function toggle(){
+function toggle() {
 	toggled.value = !toggled.value
 }
 
 function checkEnabled() {
-	if(!enabled.value && toggled.value) {
+	if (!enabled.value && toggled.value) {
 		toggled.value = false
 	}
 }

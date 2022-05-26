@@ -28,9 +28,7 @@ import {useRouter} from 'vue-router'
 import {useMenu} from '../composables'
 
 const $props = defineProps({
-	items: {
-		type: Array
-	},
+	items: {type: Array},
 	name: String,
 	inset: {
 		type: Number,
@@ -38,7 +36,7 @@ const $props = defineProps({
 	}
 })
 
-const itemClasses = computed(() => ['inset-' + $props.inset])
+const itemClasses = computed(() => [`inset-${$props.inset}`])
 
 const menuItems = ref([])
 

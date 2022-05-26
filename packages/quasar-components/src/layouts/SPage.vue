@@ -12,7 +12,7 @@ interface Props {
 	padding?: boolean
 	styleFn?: (offset: number, height: number) => any
 	center?: boolean
-	innerClass?: string[] | Record<string, any>
+	innerClass?: Record<string, any> | string[]
 }
 
 const {padding = true, styleFn, center = false, innerClass = []} = defineProps<Props>()

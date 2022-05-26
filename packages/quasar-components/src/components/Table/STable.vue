@@ -99,8 +99,8 @@
 <script lang="ts" setup>
 import {isEmpty} from '@snickbit/utilities'
 import {computed, useSlots, watch} from 'vue'
-import SImg from '../SImg.vue'
 import {defaultTableOptions, STable} from './table'
+import SImg from '../SImg.vue'
 
 const $slots = useSlots()
 
@@ -109,10 +109,10 @@ interface Props {
 	disableSearch: boolean
 	topRightStacked: boolean
 	rowKey: string
-	selection: 'none' | 'single' | 'multiple'
+	selection: 'multiple' | 'none' | 'single'
 }
 
-let {table = {...defaultTableOptions}, disableSearch, topRightStacked, rowKey = '_id', selection =  'none'} = defineProps<Props>()
+let {table = {...defaultTableOptions}, disableSearch, topRightStacked, rowKey = '_id', selection = 'none'} = defineProps<Props>()
 
 watch(() => table, () => {
 	Object.assign($table, table)
@@ -157,7 +157,7 @@ function tableStyles() {
 
 	styles['max-height'] = `calc(100vh - ${base}px)`
 
-	return {...styles, ...($table.styles || {})}
+	return {...styles, ...$table.styles || {}}
 }
 
 const bodySlots = computed(() => Object.keys($slots).filter(key => key.startsWith('body-cell-') && key !== 'body-cell-actions'))

@@ -1,8 +1,8 @@
 <script>
-import useDark, {useDarkProps} from 'quasar/src/composables/private/use-dark'
-import useFullscreen, {useFullscreenEmits, useFullscreenProps} from 'quasar/src/composables/private/use-fullscreen'
 import {hSlot} from 'quasar/src/utils/private/render'
 import {computed, defineComponent, getCurrentInstance, h} from 'vue'
+import useDark, {useDarkProps} from 'quasar/src/composables/private/use-dark'
+import useFullscreen, {useFullscreenEmits, useFullscreenProps} from 'quasar/src/composables/private/use-fullscreen'
 
 export default defineComponent({
 	name: 'SDisplayCard',
@@ -23,9 +23,7 @@ export default defineComponent({
 		padding: Boolean
 	},
 
-	emits: [
-		...useFullscreenEmits
-	],
+	emits: [...useFullscreenEmits],
 
 	setup(props, {slots}) {
 		const vm = getCurrentInstance()
@@ -33,18 +31,16 @@ export default defineComponent({
 
 		const {inFullscreen} = useFullscreen()
 
-		const classes = computed(() => 's-display-card' + (isDark.value === true ? ' s-display-card--dark q-dark' : '') + (inFullscreen.value === true ? ' fullscreen' : '') + (props.bordered === true ? ' s-display-card--bordered' : '') + (props.square === true ? ' s-display-card--square no-border-radius' : '') + (props.flat === true ? ' s-display-card--flat no-shadow' : ''))
+		const classes = computed(() => `s-display-card${isDark.value === true ? ' s-display-card--dark q-dark' : ''}${inFullscreen.value === true ? ' fullscreen' : ''}${props.bordered === true ? ' s-display-card--bordered' : ''}${props.square === true ? ' s-display-card--square no-border-radius' : ''}${props.flat === true ? ' s-display-card--flat no-shadow' : ''}`)
 
-		const style = computed(() => (inFullscreen.value !== true && props.height !== void 0 ? {height: props.height} : {}))
+		const style = computed(() => inFullscreen.value !== true && props.height !== void 0 ? {height: props.height} : {})
 
 		const child_classes = computed(() => 's-display-card__section s-display-card__section--vert')
 
 		return () => h(props.tag, {
 			class: classes.value,
 			style: style.value
-		}, [
-			h(props.tag, {class: child_classes.value}, hSlot(slots.default))
-		])
+		}, [h(props.tag, {class: child_classes.value}, hSlot(slots.default))])
 	}
 })
 </script>

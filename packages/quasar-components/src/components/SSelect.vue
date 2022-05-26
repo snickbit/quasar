@@ -30,7 +30,7 @@
 import {QSelect} from 'quasar'
 
 interface Props {
-	checkbox?: boolean,
+	checkbox?: boolean
 	multiple?: boolean
 }
 

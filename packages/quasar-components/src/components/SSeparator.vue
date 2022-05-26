@@ -11,7 +11,7 @@ import {ref, watch} from 'vue'
 interface Props {
 	vertical?: boolean
 	inset?: boolean
-	spaced?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'none'
+	spaced?: 'lg' | 'md' | 'none' | 'sm' | 'xl' | 'xs'
 }
 
 const {vertical, inset = true, spaced = 'md'} = defineProps<Props>()

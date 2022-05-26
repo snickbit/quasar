@@ -8,19 +8,22 @@ export function createMenu(...args) {
 		{options: 'object'},
 		{items: 'array'}
 	])
-	if (isEmpty(items)) items = [
-		{
+	if (isEmpty(items)) {
+		items = [{
 			icon: 'home',
 			label: 'Home',
 			to: '/'
-		}
-	]
-	if (!name) name = 'main'
-	if (!options) options = {}
+		}]
+	}
+	if (!name) {
+		name = 'main'
+	}
+	if (!options) {
+		options = {}
+	}
 	const {actions, getters, ...rest} = options
 
-	return createStore(
-		`menu-${name}`,
+	return createStore(`menu-${name}`,
 		{
 			getters: {
 				isMini() {

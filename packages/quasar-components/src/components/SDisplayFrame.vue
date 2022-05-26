@@ -32,9 +32,7 @@ export default {
 		nonExpandable: Boolean
 	},
 	setup() {
-		return {
-			fullscreen: ref(false)
-		}
+		return {fullscreen: ref(false)}
 	}
 }
 </script>

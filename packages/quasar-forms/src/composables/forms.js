@@ -8,13 +8,18 @@ export function createForm(...args) {
 		{options: 'object'},
 		{items: 'array'}
 	])
-	if (isEmpty(fields)) fields = []
-	if (!name) name = 'default'
-	if (!options) options = {}
+	if (isEmpty(fields)) {
+		fields = []
+	}
+	if (!name) {
+		name = 'default'
+	}
+	if (!options) {
+		options = {}
+	}
 	const {actions, getters, ...rest} = options
 
-	return createStore(
-		`form-${name}`,
+	return createStore(`form-${name}`,
 		{
 			getters: {
 				data() {
@@ -28,10 +33,18 @@ export function createForm(...args) {
 			},
 			actions: {
 				addField(name, type, defaultValue) {
-					if (isObject(name)) ({name, type, defaultValue} = name)
-					if (!isString(name)) throw new Error('Field name must be a string')
-					if (!isString(type)) throw new Error('Field type must be a string')
-					if (!isEmpty(this.$state.fields[name])) throw new Error(`Field ${name} already exists`)
+					if (isObject(name)) {
+						({name, type, defaultValue} = name)
+					}
+					if (!isString(name)) {
+						throw new Error('Field name must be a string')
+					}
+					if (!isString(type)) {
+						throw new Error('Field type must be a string')
+					}
+					if (!isEmpty(this.$state.fields[name])) {
+						throw new Error(`Field ${name} already exists`)
+					}
 					this.$state.fields[name] = {
 						name,
 						type,
@@ -70,21 +83,20 @@ export function createForm(...args) {
 						if (results === true) {
 							this[field_name].error = false
 							return true
-						} else {
-							this[field_name].error = results
-							return results
 						}
-					} else {
-						const field_names = Object.keys(this.$state)
-						const results = {}
-						for (let field_name of field_names) {
-							results[field_name] = this.validate(field_name)
-						}
-						this.$state.valid = Object.values(results).every(result => result === true)
-						if (!this.$state.valid) {
-							this.$state.errors = objectFilter(results, result => isString(result))
-						}
+						this[field_name].error = results
+						return results
 					}
+					const field_names = Object.keys(this.$state)
+					const results = {}
+					for (let field_name of field_names) {
+						results[field_name] = this.validate(field_name)
+					}
+					this.$state.valid = Object.values(results).every(result => result === true)
+					if (!this.$state.valid) {
+						this.$state.errors = objectFilter(results, result => isString(result))
+					}
+
 					return this.$state.valid
 				},
 				...actions
