@@ -44,7 +44,7 @@
 	},
 	"devDependencies": {
 		"@quasar/vite-plugin": "^1.0.10",
-		"@remedyred/indexer": "^2.4.0",
+		"@remedyred/indexer": "^2.4.1",
 		"@snickbit/node-cli": "^1.0.50",
 		"@snickbit/out": "^2.0.27",
 		"@vitejs/plugin-vue": "^2.3.3",
