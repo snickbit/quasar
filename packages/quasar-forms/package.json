@@ -1,6 +1,6 @@
 {
 	"name": "@snickbit/quasar-forms",
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"description": "Quasar form generation",
 	"license": "MIT",
 	"exports": {
@@ -23,8 +23,8 @@
 		"watch": "vite build --watch"
 	},
 	"dependencies": {
-		"@snickbit/minia": "^0.0.24",
-		"@snickbit/utilities": "^3.0.22",
+		"@snickbit/minia": "^0.0.25",
+		"@snickbit/utilities": "^3.0.23",
 		"quasar": "^2.6.6",
 		"vue": "^3.2.33",
 		"vue-router": "^4.0.14"
