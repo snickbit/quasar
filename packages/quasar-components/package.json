@@ -1,6 +1,6 @@
 {
 	"name": "@snickbit/quasar",
-	"version": "0.2.6",
+	"version": "0.2.7",
 	"description": "My custom Quasar components. Use with caution.",
 	"license": "MIT",
 	"exports": {
@@ -37,7 +37,7 @@
 	},
 	"dependencies": {
 		"@quasar/extras": "^1.14.0",
-		"@snickbit/utilities": "^3.0.20",
+		"@snickbit/utilities": "^3.0.22",
 		"quasar": "^2.7.1",
 		"vue": "^3.2.36",
 		"vue-router": "^4.0.15"
@@ -45,8 +45,8 @@
 	"devDependencies": {
 		"@quasar/vite-plugin": "^1.0.10",
 		"@remedyred/indexer": "^2.4.1",
-		"@snickbit/node-cli": "^1.0.50",
-		"@snickbit/out": "^2.0.27",
+		"@snickbit/node-cli": "^1.0.51",
+		"@snickbit/out": "^2.0.28",
 		"@vitejs/plugin-vue": "^2.3.3",
 		"bundle-scss": "^1.5.1",
 		"chokidar": "^3.5.3",
