@@ -98,7 +98,7 @@
 </template>
 <script lang="ts" setup>
 import {isEmpty} from '@snickbit/utilities'
-import {computed, useSlots, watch} from 'vue'
+import {computed, reactive, useSlots, watch} from 'vue'
 import {defaultTableOptions, STable} from './table'
 import SImg from '../SImg.vue'
 
@@ -114,12 +114,12 @@ interface Props {
 
 let {table = {...defaultTableOptions}, disableSearch, topRightStacked, rowKey = '_id', selection = 'none'} = defineProps<Props>()
 
-watch(() => table, () => {
-	Object.assign($table, table)
+watch(() => table, newTable => {
+	Object.assign($table, newTable)
 }, {deep: true})
 
 const $emit = defineEmits(['request', 'update:table'])
-const $table: STable = Object.assign(defaultTableOptions, table)
+const $table: STable = reactive(Object.assign(defaultTableOptions, table))
 
 const tableColumns = computed(() => {
 	const table_columns = $table.columns.slice()
