@@ -5,7 +5,7 @@ type ComponentType = any
 
 export interface PluginInstance {
 	version: string
-	install: (app: App) => void
+	install(app: App): void
 }
 
 export default function(components?: ComponentType[]): PluginInstance {

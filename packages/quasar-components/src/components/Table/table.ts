@@ -53,7 +53,7 @@ export interface STableColumn {
 	 * @param rowB Full Row object in which is contained the second term
 	 * @returns Comparison result of term 'a' with term 'b'. Less than 0 when 'a' should come first; greater than 0 if 'b' should come first; equal to 0 if their position must not be changed with respect to each other
 	 */
-	sort?: (a: any, b: any, rowA: any, rowB: any) => number
+	sort?(a: any, b: any, rowA: any, rowB: any): number
 
 	/**
 	 * Set column sort order: 'ad' (ascending-descending) or 'da' (descending-ascending); Overrides the 'column-sort-order' prop
@@ -67,7 +67,7 @@ export interface STableColumn {
 	 * @param row Full Row object in which the cell is contained
 	 * @returns The resulting formatted value
 	 */
-	format?: (val: any, row: any) => any
+	format?(val: any, row: any): any
 
 	/**
 	 * Style to apply on normal cells of the column

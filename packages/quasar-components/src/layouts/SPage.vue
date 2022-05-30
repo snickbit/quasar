@@ -10,7 +10,7 @@ import {ref, watch} from 'vue'
 
 interface Props {
 	padding?: boolean
-	styleFn?: (offset: number, height: number) => any
+	styleFn?(offset: number, height: number): any
 	center?: boolean
 	innerClass?: Record<string, any> | string[]
 }
