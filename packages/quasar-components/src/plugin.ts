@@ -26,15 +26,15 @@ export default function(components?: ComponentType[]): PluginInstance {
 
 		installTargets.push(app)
 
-		components.forEach(component => {
+		for (const component of components) {
 			const {name, alias} = component
 			registerComponent(app, name, component)
 			if (alias) {
-				alias.forEach((aliasName: string) => {
+				for (const aliasName of alias) {
 					registerComponent(app, aliasName, component)
-				})
+				}
 			}
-		})
+		}
 	}
 
 	return {
