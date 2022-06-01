@@ -30,7 +30,7 @@ const defaultCurrency: CurrencyInputOptions = {
 	currencyDisplay: CurrencyDisplay.hidden,
 	valueRange: {
 		min: 0,
-		max: 100000
+		max: 100000000
 	},
 	precision: 2,
 	hideCurrencySymbolOnFocus: true,
