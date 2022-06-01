@@ -245,7 +245,7 @@ function getTitle(props: RowProps): GridTitle {
 		return {value: gridOptions.value.title}
 	} else if (gridOptions.value.titleField) {
 		return {
-			label: props.colsMap[gridOptions.value.titleField].label || gridOptions.value.titleField,
+			label: props.colsMap[gridOptions.value.titleField]?.label || gridOptions.value.titleField,
 			value: props.row[gridOptions.value.titleField]
 		}
 	}
