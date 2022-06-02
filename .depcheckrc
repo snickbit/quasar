@@ -19,7 +19,8 @@
 		"@snickbit/node-cli",
 		"@snickbit/out",
 		"chokidar",
-		"concurrently"
+		"concurrently",
+		"vue-currency-input"
 	],
 	"oneline": true,
 	"ignore-bin-package": true
