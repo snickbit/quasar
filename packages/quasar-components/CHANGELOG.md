@@ -1,5 +1,11 @@
 # @snickbit/quasar Changelog
 
+## 0.2.10
+
+### Patch Changes
+
+- [cad6bbc](https://github.com/snickbit/quasar/commit/cad6bbc) **chore**:  update dependencies
+
 ## 0.2.9
 
 ### Patch Changes

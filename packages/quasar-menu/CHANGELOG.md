@@ -1,5 +1,11 @@
 # @snickbit/quasar-menu Changelog
 
+## 0.1.8
+
+### Patch Changes
+
+- [cad6bbc](https://github.com/snickbit/quasar/commit/cad6bbc) **chore**:  update dependencies
+
 ## 0.1.5
 
 ### Patch Changes
