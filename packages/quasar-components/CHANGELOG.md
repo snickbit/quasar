@@ -1,5 +1,19 @@
 # @snickbit/quasar Changelog
 
+## 0.2.9
+
+### Patch Changes
+
+- [76aa66c](https://github.com/snickbit/quasar/commit/76aa66c) **feat**:  add error dialog
+- [db0a168](https://github.com/snickbit/quasar/commit/db0a168) **fix**:  fallback for missing field
+- [42bacc3](https://github.com/snickbit/quasar/commit/42bacc3) **fix**:  improve STable grid styles
+- [b93a2cb](https://github.com/snickbit/quasar/commit/b93a2cb) **fix**:  increase default currency max
+- [2cd7ddf](https://github.com/snickbit/quasar/commit/2cd7ddf) **feat**:  add currency input component
+- [2a47005](https://github.com/snickbit/quasar/commit/2a47005) **fix**:  replace forEach with for..of loop for performance
+- [926377e](https://github.com/snickbit/quasar/commit/926377e) **feat**:  add date input component
+- [6376a80](https://github.com/snickbit/quasar/commit/6376a80) **fix**:  STable reactivity
+- [55f04b2](https://github.com/snickbit/quasar/commit/55f04b2) **style**:  lint
+
 ## 0.2.6
 
 ### Patch Changes
