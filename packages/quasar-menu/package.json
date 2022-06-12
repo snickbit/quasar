@@ -26,15 +26,15 @@
 		"@snickbit/minia": "^0.0.28",
 		"@snickbit/utilities": "^3.0.27",
 		"quasar": "^2.7.1",
-		"vue": "^3.2.36",
-		"vue-router": "^4.0.15"
+		"vue": "^3.2.37",
+		"vue-router": "^4.0.16"
 	},
 	"devDependencies": {
 		"@quasar/vite-plugin": "^1.0.10",
-		"@remedyred/indexer": "^2.5.0",
+		"@remedyred/indexer": "^2.5.1",
 		"@vitejs/plugin-vue": "^2.3.3",
-		"sass": "^1.52.2",
+		"sass": "^1.52.3",
 		"shx": "^0.3.4",
-		"vite": "^2.9.9"
+		"vite": "^2.9.12"
 	}
 }
