@@ -1,5 +1,13 @@
 # @snickbit/quasar Changelog
 
+## 0.2.16
+
+### Patch Changes
+
+- [e696205](https://github.com/snickbit/quasar/commit/e696205) **fix**:  migrate to @snickbit/indexer
+- [e8343c9](https://github.com/snickbit/quasar/commit/e8343c9) **chore**:  bump dependencies
+- [e3601f9](https://github.com/snickbit/quasar/commit/e3601f9) **chore**:  bump dependencies
+
 ## 0.2.10
 
 ### Patch Changes

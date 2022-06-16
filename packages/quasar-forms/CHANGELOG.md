@@ -1,5 +1,13 @@
 # @snickbit/quasar-forms Changelog
 
+## 0.1.11
+
+### Patch Changes
+
+- [e696205](https://github.com/snickbit/quasar/commit/e696205) **fix**:  migrate to @snickbit/indexer
+- [e3601f9](https://github.com/snickbit/quasar/commit/e3601f9) **chore**:  bump dependencies
+- [47365fe](https://github.com/snickbit/quasar/commit/47365fe) **chore**:  bump deps
+
 ## 0.1.8
 
 ### Patch Changes
