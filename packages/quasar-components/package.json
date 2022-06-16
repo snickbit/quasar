@@ -40,7 +40,7 @@
 		"@snickbit/utilities": "^3.0.27",
 		"quasar": "^2.7.1",
 		"vue": "^3.2.37",
-		"vue-currency-input": "^2.4.0",
+		"vue-currency-input": "^2.5.1",
 		"vue-router": "^4.0.16"
 	},
 	"devDependencies": {
@@ -51,7 +51,7 @@
 		"@vitejs/plugin-vue": "^2.3.3",
 		"bundle-scss": "^1.5.1",
 		"chokidar": "^3.5.3",
-		"concurrently": "^7.2.1",
+		"concurrently": "^7.2.2",
 		"sass": "^1.52.3",
 		"shx": "^0.3.4",
 		"vite": "^2.9.12"
