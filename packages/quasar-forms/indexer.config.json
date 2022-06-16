@@ -1,5 +1,4 @@
 {
 	"source": "src/**/*.{js,vue}",
-	"output": "src/index.js",
-	"type": "wildcard"
+	"output": "src/index.js"
 }
