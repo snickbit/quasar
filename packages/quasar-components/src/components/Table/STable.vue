@@ -82,7 +82,7 @@
 
 			<template v-if="$table.pagination" #bottom="scope">
 				<span class="q-table__bottom-item">
-					Records {{ scope.pagination.page * scope.pagination.rowsPerPage + 1 }} - {{ scope.pagination.page * scope.pagination.rowsPerPage + scope.pagination.rowsPerPage }} of {{ scope.pagination.rowsNumber }}
+					Records {{ scope.pagination.page * scope.pagination.rowsPerPage + 1 }} - {{ scope.pagination.page * scope.pagination.rowsPerPage + scope.pagination.rowsPerPage }} of {{ $table.pagination.rowsNumber }}
 				</span>
 				<q-space/>
 				<span class="q-table__bottom-item">
@@ -97,7 +97,7 @@
 					options-dense
 					@update:model-value="onRequest(scope)"
 				/>
-				<q-pagination v-model="scope.pagination.page" :max="scope.pagination.rowsNumber" input @update:model-value="onRequest(scope)"/>
+				<q-pagination v-model="scope.pagination.page" :max="$table.pagination.rowsNumber" input @update:model-value="onRequest(scope)"/>
 			</template>
 
 			<template #item="props">
