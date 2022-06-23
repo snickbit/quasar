@@ -25,7 +25,7 @@
 	],
 	"scripts": {
 		"build": "concurrently -n vite,styles \"pnpm run build:vite\" \"pnpm run build:styles\"",
-		"build:styles": "node bundle-scss.mjs",
+		"build:styles": "node scripts/bundle-scss.mjs",
 		"build:vite": "vite build",
 		"clean": "shx rm -rf dist",
 		"depcheck": "depcheck",
@@ -54,6 +54,7 @@
 		"concurrently": "^7.2.2",
 		"sass": "^1.52.3",
 		"shx": "^0.3.4",
-		"vite": "^2.9.12"
+		"vite": "^2.9.12",
+		"vite-dts": "^1.0.4"
 	}
 }

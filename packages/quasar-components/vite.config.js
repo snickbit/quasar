@@ -2,6 +2,7 @@ import {quasar, transformAssetUrls} from '@quasar/vite-plugin'
 import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
+import dts from 'vite-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -42,5 +43,5 @@ export default defineConfig({
 	plugins: [vue({
 		template: {transformAssetUrls},
 		reactivityTransform: true
-	}), quasar({sassVariables: 'src/styles/quasar-variables.scss'})]
+	}), quasar({sassVariables: 'src/styles/quasar-variables.scss'}), dts()]
 })
