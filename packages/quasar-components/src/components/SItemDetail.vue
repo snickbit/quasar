@@ -24,32 +24,30 @@
 import {computed, useSlots} from 'vue'
 import SCopy from './SCopy.vue'
 
-const $props = defineProps({
-	label: {
-		type: String,
-		default: ''
-	},
-	tooltip: Boolean,
-	tooltipLabel: {
-		type: [String, Boolean],
-		default: 'Copy to clipboard'
-	},
-	value: {
-		type: [String, Number],
-		default: ''
-	},
-	size: {
-		type: String,
-		default: ''
-	},
-	showNull: Boolean
-})
+interface Props {
+	label?: string
+	size?: string
+	value?: number | string
+	showNull?: boolean
+	tooltip?: boolean
+	tooltipLabel?: string | false
+}
+
+const {
+	label = '',
+	value = '',
+	size = '',
+	showNull,
+	tooltip,
+	tooltipLabel = 'Copy to clipboard'
+} = defineProps<Props>()
+
 const $slots = useSlots()
-const hasLabel = computed(() => $slots.label || $props.label)
+const hasLabel = computed(() => $slots.label || label)
 const valueClass = computed(() => {
 	const classes = ['s-item-detail__value']
-	if ($props.size) {
-		classes.push(`text-${$props.size}`)
+	if (size) {
+		classes.push(`text-${size}`)
 	}
 	return classes
 })

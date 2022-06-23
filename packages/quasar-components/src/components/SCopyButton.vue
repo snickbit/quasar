@@ -19,51 +19,36 @@
 </template>
 <script lang="ts" setup>
 import {computed} from 'vue'
+import {ElementAnchor} from '../quasar'
 import SCopy from './SCopy.vue'
 
-const $props = defineProps({
-	content: {
-		type: String,
-		default: ''
-	},
-	round: {
-		type: Boolean,
-		default: true
-	},
-	flat: {
-		type: Boolean,
-		default: true
-	},
-	dense: Boolean,
-	icon: {
-		type: String,
-		default: 'copy'
-	},
-	anchor: {
-		type: String,
-		default: 'center left'
-	},
-	self: {
-		type: String,
-		default: 'center middle'
-	},
-	offset: {
-		type: Array,
-		default: () => [0, 0]
-	},
-	copiedLabel: {
-		type: String,
-		default: 'Copied!'
-	},
-	label: {
-		type: String,
-		default: 'Copy to clipboard'
-	},
-	copiedTimeout: {
-		type: Number,
-		default: 2000
-	}
-})
+interface Props {
+	content?: string
+	anchor?: ElementAnchor
+	self?: ElementAnchor
+	offset?: [number, number] | undefined
+	copiedLabel?: string
+	label?: string | false
+	copiedTimeout?: number
+	round?: boolean
+	flat?: boolean
+	dense?: boolean
+	icon?: string
+}
 
-const disabled = computed(() => !$props.content || !$props.content.length)
+const {
+	content,
+	anchor = 'bottom middle' as Props['anchor'],
+	self = 'top middle' as Props['self'],
+	offset = [0, 0],
+	copiedLabel = 'Copied!',
+	label = 'Copy to clipboard',
+	copiedTimeout = 2000,
+	round = true,
+	flat = true,
+	dense,
+	icon = 'copy'
+} = defineProps<Props>()
+
+const disabled = computed(() => !content || !content.length)
 </script>
