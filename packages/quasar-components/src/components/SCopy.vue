@@ -16,11 +16,12 @@
 import {isNullDefined} from '@snickbit/utilities'
 import {computed, ComputedRef, ref} from 'vue'
 import {useCopyHelper} from '../composables/use-copy-helper'
+import {ElementAnchor} from '../quasar'
 
 interface Props {
 	modelValue?: number | string
-	anchor?: 'bottom end' | 'bottom left' | 'bottom middle' | 'bottom right' | 'bottom start' | 'center end' | 'center left' | 'center middle' | 'center right' | 'center start' | 'top end' | 'top left' | 'top middle' | 'top right' | 'top start' | undefined
-	self?: 'bottom end' | 'bottom left' | 'bottom middle' | 'bottom right' | 'bottom start' | 'center end' | 'center left' | 'center middle' | 'center right' | 'center start' | 'top end' | 'top left' | 'top middle' | 'top right' | 'top start' | undefined
+	anchor?: ElementAnchor
+	self?: ElementAnchor
 	offset?: [number, number] | undefined
 	copiedLabel?: string
 	label?: string | false

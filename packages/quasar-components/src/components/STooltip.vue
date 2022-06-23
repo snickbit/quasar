@@ -5,6 +5,7 @@
 </template>
 <script lang="ts" setup>
 import {ref} from 'vue'
+import {ElementAnchor} from '../quasar'
 
 interface Props {
 	left?: boolean
@@ -16,8 +17,8 @@ interface Props {
 
 const {left, right, top, bottom, collapsed} = defineProps<Props>()
 
-const anchor = ref<string>('bottom middle')
-const self = ref<string>('top middle')
+const anchor = ref<ElementAnchor>('bottom middle')
+const self = ref<ElementAnchor>('top middle')
 
 if (left || collapsed) {
 	anchor.value = 'center left'
