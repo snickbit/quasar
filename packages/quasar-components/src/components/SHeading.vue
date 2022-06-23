@@ -14,26 +14,27 @@
 		<q-separator color="primary" size="0.25rem" spaced/>
 	</div>
 </template>
-<script>
-import {defineComponent} from 'vue'
+<script lang="ts" setup>
+import {ref, watch} from 'vue'
 
-export default defineComponent({
-	name: 'SHeading',
-	props: {
-		center: Boolean,
-		size: {
-			type: String,
-			default: 'h3'
-		}
-	},
-	setup(props) {
-		let classes = [`text-${props.size}`]
+interface Props {
+	size?: string
+	center?: boolean
+}
 
-		if (props.center) {
-			classes.push('text-center')
-		}
+const {size = 'h3', center} = defineProps<Props>()
+const classes = ref([])
 
-		return {classes}
+setClasses(size)
+watch(() => size, setClasses)
+
+function setClasses(val: string) {
+	let cls = [`text-${val}`]
+
+	if (center) {
+		cls.push('text-center')
 	}
-})
+
+	return cls
+}
 </script>

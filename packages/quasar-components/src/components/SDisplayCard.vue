@@ -1,48 +1,79 @@
-<script>
-import {hSlot} from 'quasar/src/utils/private/render'
-import {computed, defineComponent, getCurrentInstance, h} from 'vue'
-import useDark, {useDarkProps} from 'quasar/src/composables/private/use-dark'
-import useFullscreen, {useFullscreenEmits, useFullscreenProps} from 'quasar/src/composables/private/use-fullscreen'
+<template>
+	<component :is="tag" :class="classes" :style="styles">
+		<component :is="tag" :class="child_classes">
+			<slot/>
+		</component>
+	</component>
+</template>
+<script lang="ts" setup>
+import {computed} from 'vue'
+import {useQuasar} from 'quasar'
+import useFullscreen, {useFullscreenEmits} from 'quasar/src/composables/private/use-fullscreen'
 
-export default defineComponent({
-	name: 'SDisplayCard',
+interface Props {
+	fullscreen?: boolean
+	noRouteFullscreenExit?: boolean
+	dark?: boolean | null
+	tag?: string
+	square?: boolean
+	flat?: boolean
+	bordered?: boolean
 
-	props: {
-		...useDarkProps, ...useFullscreenProps,
+	height?: number | string
 
-		tag: {
-			type: String,
-			default: 'div'
-		},
+	padding?: boolean | number | string
+}
 
-		square: Boolean,
-		flat: Boolean,
-		bordered: Boolean,
+const {
+	dark,
+	tag,
+	square,
+	flat,
+	bordered,
+	height,
+	padding
+} = defineProps<Props>()
 
-		height: String,
-		padding: Boolean
-	},
+defineEmits([...useFullscreenEmits])
 
-	emits: [...useFullscreenEmits],
+const $q = useQuasar()
 
-	setup(props, {slots}) {
-		const vm = getCurrentInstance()
-		const isDark = useDark(props, vm.proxy.$q)
+const {inFullscreen} = useFullscreen()
 
-		const {inFullscreen} = useFullscreen()
+const classes = computed(() => {
+	const cls = ['s-display-card']
 
-		const classes = computed(() => `s-display-card${isDark.value === true ? ' s-display-card--dark q-dark' : ''}${inFullscreen.value === true ? ' fullscreen' : ''}${props.bordered === true ? ' s-display-card--bordered' : ''}${props.square === true ? ' s-display-card--square no-border-radius' : ''}${props.flat === true ? ' s-display-card--flat no-shadow' : ''}`)
-
-		const style = computed(() => inFullscreen.value !== true && props.height !== void 0 ? {height: props.height} : {})
-
-		const child_classes = computed(() => 's-display-card__section s-display-card__section--vert')
-
-		return () => h(props.tag, {
-			class: classes.value,
-			style: style.value
-		}, [h(props.tag, {class: child_classes.value}, hSlot(slots.default))])
+	if ($q.dark.isActive || dark) {
+		cls.push('s-display-card--dark q-dark')
 	}
+
+	if (inFullscreen.value === true) {
+		cls.push('fullscreen')
+	}
+
+	if (bordered) {
+		cls.push('s-display-card--bordered')
+	}
+
+	if (square) {
+		cls.push('s-display-card--square no-border-radius')
+	}
+
+	if (flat) {
+		cls.push('s-display-card--flat no-shadow')
+	}
+
+	if (padding) {
+		cls.push('q-padding-md')
+	}
+
+	return cls
 })
+
+const styles = computed(() => $q.fullscreen.isActive !== true && height !== void 0 ? {height} : {})
+
+const child_classes = computed(() => 's-display-card__section s-display-card__section--vert')
+
 </script>
 <style lang="scss">
 .s-display-card {

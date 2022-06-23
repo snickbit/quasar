@@ -16,25 +16,19 @@
 		</q-layout>
 	</s-display-card>
 </template>
-<script>
+<script lang="ts" setup>
 import {ref} from 'vue'
 import SDisplayCard from './SDisplayCard.vue'
 import SHeading from './SHeading.vue'
 
-export default {
-	name: 'SDisplayFrame',
-	components: {
-		SDisplayCard,
-		SHeading
-	},
-	props: {
-		heading: String,
-		nonExpandable: Boolean
-	},
-	setup() {
-		return {fullscreen: ref(false)}
-	}
+interface Props {
+	heading?: string
+	nonExpandable?: boolean
 }
+
+const {heading, nonExpandable} = defineProps<Props>()
+
+const fullscreen = ref(false)
 </script>
 <style lang="scss">
 .s-display-frame-layout{
