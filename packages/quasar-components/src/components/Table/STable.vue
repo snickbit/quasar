@@ -235,9 +235,9 @@ interface RowProps {
 	colsMap: any
 }
 
-type GridTitle = boolean | {
+type GridTitle = {
 	label?: string
-	value: string
+	value: string | false
 }
 
 function getTitle(props: RowProps): GridTitle {
@@ -248,6 +248,10 @@ function getTitle(props: RowProps): GridTitle {
 			label: props.colsMap[gridOptions.value.titleField]?.label || gridOptions.value.titleField,
 			value: props.row[gridOptions.value.titleField]
 		}
+	}
+	return {
+		label: '',
+		value: false
 	}
 }
 
