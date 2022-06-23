@@ -8,6 +8,7 @@ export interface STable {
 	filter?: string
 	pagination: STablePagination
 	styles?: any
+	binaryStateSort?: boolean
 }
 
 export interface STableColumn {
