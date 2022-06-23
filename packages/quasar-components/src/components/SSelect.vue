@@ -1,10 +1,12 @@
 <template>
 	<q-select
+		:model-value="modelValue"
 		filled
 		hide-selected
 		map-options
 		multiple
 		v-bind="$attrs"
+		@update:model-value="$emit('update:model-value', $event)"
 	>
 		<template v-for="(data, key) in $slots" #[key]="props">
 			<slot :name="key" v-bind="props"/>
@@ -30,9 +32,11 @@
 import {QSelect} from 'quasar'
 
 interface Props {
+	modelValue: any
 	checkbox?: boolean
 	multiple?: boolean
 }
 
 defineProps<Props>()
+defineEmits(['update:model-value'])
 </script>
