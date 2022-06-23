@@ -3,6 +3,7 @@
 		"bin"
 	],
 	"ignores": [
+		"rollup",
 		"@snickbit/utilities",
 		"@types/jest",
 		"animations",
