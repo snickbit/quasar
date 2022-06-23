@@ -26,12 +26,14 @@ export default function(components?: ComponentType[]): PluginInstance {
 
 		installTargets.push(app)
 
-		for (const component of components) {
-			const {name, alias} = component
-			registerComponent(app, name, component)
-			if (alias) {
-				for (const aliasName of alias) {
-					registerComponent(app, aliasName, component)
+		if (components) {
+			for (const component of components) {
+				const {name, alias} = component
+				registerComponent(app, name, component)
+				if (alias) {
+					for (const aliasName of alias) {
+						registerComponent(app, aliasName, component)
+					}
 				}
 			}
 		}
