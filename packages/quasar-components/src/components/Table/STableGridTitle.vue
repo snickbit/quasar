@@ -14,7 +14,7 @@
 
 interface Props {
 	label?: string
-	value: string
+	value?: string | false
 }
 
 const {label, value} = defineProps<Props>()
