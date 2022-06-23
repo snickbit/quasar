@@ -1,6 +1,6 @@
 {
 	"name": "@snickbit/quasar-forms",
-	"version": "0.1.11",
+	"version": "0.1.12",
 	"description": "Quasar form generation",
 	"license": "MIT",
 	"exports": {

@@ -1,5 +1,24 @@
 # @snickbit/quasar Changelog
 
+## 0.2.17
+
+### Patch Changes
+
+- [8a493d0](https://github.com/snickbit/quasar/commit/8a493d0) **chore**:  update dependencies
+- [618985d](https://github.com/snickbit/quasar/commit/618985d) **chore**:  add missing peer dependencies
+- [75c6b3a](https://github.com/snickbit/quasar/commit/75c6b3a) **build**:  add source maps
+- [2c365e2](https://github.com/snickbit/quasar/commit/2c365e2) **build**:  add type declarations to dist
+- [599d1c5](https://github.com/snickbit/quasar/commit/599d1c5) **fix**:  add missing type prop
+- [a1659dd](https://github.com/snickbit/quasar/commit/a1659dd) **fix**:  convert to typescript format
+- [8652e74](https://github.com/snickbit/quasar/commit/8652e74) **refactor**:  add ElementAnchor type definition
+- [da899e7](https://github.com/snickbit/quasar/commit/da899e7) **fix**:  define required modelValue
+- [60b7417](https://github.com/snickbit/quasar/commit/60b7417) **fix**:  table grid title should expect falsy-able value prop
+- [3a59c8a](https://github.com/snickbit/quasar/commit/3a59c8a) **fix**:  getTitle should always return an object
+- [14c1b81](https://github.com/snickbit/quasar/commit/14c1b81) **fix**:  pagination total should come from table object, not scope
+- [daba82b](https://github.com/snickbit/quasar/commit/daba82b) **fix**:  declare private quasar composable
+- [acdff98](https://github.com/snickbit/quasar/commit/acdff98) **fix**:  ensure components var is defined
+- [d8b1c61](https://github.com/snickbit/quasar/commit/d8b1c61) **refactor**:  migrate to typescript
+
 ## 0.2.16
 
 ### Patch Changes

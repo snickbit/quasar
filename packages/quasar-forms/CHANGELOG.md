@@ -1,5 +1,11 @@
 # @snickbit/quasar-forms Changelog
 
+## 0.1.12
+
+### Patch Changes
+
+- [8a493d0](https://github.com/snickbit/quasar/commit/8a493d0) **chore**:  update dependencies
+
 ## 0.1.11
 
 ### Patch Changes
