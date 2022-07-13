@@ -1,6 +1,6 @@
 {
 	"name": "@snickbit/quasar-menu",
-	"version": "0.1.13",
+	"version": "0.1.14",
 	"description": "Quasar sidebar menu generation using @snickbit/minia",
 	"license": "MIT",
 	"exports": {
@@ -23,8 +23,8 @@
 		"watch": "vite build --watch --mode 'development"
 	},
 	"dependencies": {
-		"@snickbit/minia": "^0.0.30",
-		"@snickbit/utilities": "^3.1.0",
+		"@snickbit/minia": "^0.0.31",
+		"@snickbit/utilities": "^3.2.0",
 		"quasar": "^2.7.3",
 		"vue": "^3.2.37",
 		"vue-router": "^4.0.16"
